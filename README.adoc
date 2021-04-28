@@ -1,0 +1,66 @@
+= Backend Engineering
+
+== Concepts
+
+- Open API
+    * Contract Driven Design
+
+- Domain Driven Design
+    * Domain
+        ** Subdomain
+        ** Domain Modelling
+        ** Domain experts
+    * Context Map
+    * Ubiquitous Language
+    * Application service, domain layer, Infrastucture layer
+    * Aggregate, Entity, Value
+    * Big ball of mud
+
+- Service Oriented Architecture
+    * Service interact with each using well defined API
+
+- Database
+    * Relational
+    * Key Value Paradigm
+        ** Mongo
+        ** Cassandra
+        ** Dynamodb
+    * Transaction Isolation Levels
+        ** Read Committed
+        ** Repeatable Read
+        ** Read Uncommitted
+        ** Serializable
+    * ACID
+        ** Atomic
+        ** Consistent
+        ** Isolated
+        ** Durable
+    * Transaction
+
+- Caching 
+    * Redis, Memcache, aws Elasticcache 
+    * app reads from cache, if miss read from db
+    * app write to db, write to cache
+    * app write to cache, write to db
+    * app write to cache, cache asynchrnously saves to db
+    
+- Testing
+    - Unit testing the logic
+    - Integration testing
+    - Contract Driven Testing 
+        * https://pact.io[pact.io]
+        * https://cloud.spring.io/spring-cloud-contract/reference/html[spring cloud contract]
+
+
+- Tools for Application Performance Monitoring
+    * New Relic, Datadog, Appdynamics, Promethus
+- API Performance Monitoring
+- Infrastructure Monitoring
+- Alerting
+- Log or events Aggregation
+    * Querying
+    * Visualtion
+
+== Software Architecture Patterns
+
+== Object Oriented Design Patterns
