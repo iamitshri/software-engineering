@@ -47,6 +47,10 @@
 - Concurrency
     * Process vs Thread.
     * Thread Pools
+    * Semaphores vs mutexes
+    * Starving
+    * Deadlock
+    * LiveLock
 
 - Database
     * Relational
@@ -76,7 +80,6 @@
         ** Isolated
         ** Durable
 
-
 - Caching 
     * Redis, Memcache, aws Elastic Cache
     * Eviction policies
@@ -89,17 +92,17 @@
     * app write to cache, cache asynchrnously saves to db
     
 - Testing
-    - Unit testing the logic
-    - Integration testing
-    - Contract Driven Testing 
-        * https://pact.io[pact.io]
-        * https://cloud.spring.io/spring-cloud-contract/reference/html[spring cloud contract]
+    * Unit testing the logic
+    * Integration testing
+    * Contract Driven Testing
+        ** https://pact.io[pact.io]
+        ** https://cloud.spring.io/spring-cloud-contract/reference/html[spring cloud contract]
 
 - Tools for Application Performance Monitoring (APM)
     * New Relic, Datadog, Appdynamics, Promethus
-- API Performance Monitoring
-- Infrastructure Monitoring
-- Alerting
+    * API Performance Monitoring
+    * Infrastructure Monitoring
+    * Alerting (OpsGenie, Pagerduty)
 
 - Log or events Aggregation
     * Querying
@@ -113,6 +116,3 @@
     * Process are optimized for faster release cycle
         ** Bugs are inevitable, so we embrace them by optimizing our processes to fix them faster
 
-== Software Architecture Patterns
-
-== Object Oriented Design Patterns
