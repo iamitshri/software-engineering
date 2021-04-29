@@ -123,3 +123,5 @@
     * Process are optimized for faster release cycle
         ** Bugs are inevitable, so we embrace them by optimizing our processes to fix them faster
 
+== References
+- https://github.com/SuyashLakhotia/TechInterview[https://github.com/SuyashLakhotia/TechInterview]
