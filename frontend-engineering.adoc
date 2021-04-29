@@ -1,0 +1,23 @@
+== Frontend Engineering Concepts
+
+- Web Page
+    * Critical Rendering Path
+        ** Aim to optimize this path. Meaning load absolutely needed resources
+        ** Loads fast.
+            *** Page is interactive asap
+            *** Loads minimum resources that user cares about as fast as possible.
+            *** Loads and paints additional page elements on demand or behind the scene
+    * Page Load time
+    * Page rendering
+        * Time spent in painting/drawing the page
+    * Memory consumed
+        ** minimize memory usage for better user experience
+    * Number of Resources loaded
+        ** Remove JS and CSS that are not required
+        ** Optimize the size: Minimize JS and CSS
+        ** Image Sprites: Single request to fetch required images
+    * Firing Parallel requests to obtain payload
+    * Lazy Loading resources rather than upfront
+    * Optimizing event processing on the page
+    * Console logging to minimum and is secured.
+
