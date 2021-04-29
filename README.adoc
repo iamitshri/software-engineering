@@ -46,11 +46,18 @@
 
 - Concurrency
     * Process vs Thread.
-    * Thread Pools
+         ** Process is instance of program in execution. Has a separate address space. Can not access data of other process directly
+         ** Thread: A thread is a particular execution path of a process
     * Semaphores vs mutexes
+      ** A mutex is a locking mechanism used to synchronize access to a resource while a semaphore is more like a signaling mechanism
+      ** A semaphore is a signalling mechanism that restricts the number of simultaneous users for a shared resource up to a maximum number. Threads can request access to the resource (by decrementing the semaphore) and can signal that they have finished using the resource (by incrementing the semaphore).
+      ** A mutex provides mutual exclusion. For example, either a producer or a consumer can have the key (mutex) to proceed with their work. As long as the buffer is being filled by the producer, the consumer needs to wait and vice-versa.
     * Starving
+         ** Thread can not make progress due to greedy or high prioritized threads getting access to resource before starved thread
     * Deadlock
+         ** Threads waiting on each other for releasing the resource
     * LiveLock
+         ** Thread is too busy responding events than doing progressing or doing useful work
 
 - Database
     * Relational
