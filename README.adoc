@@ -2,6 +2,30 @@
 
 == Concepts
 
+- Protocols
+    * TCP
+    * UDP
+    * Http
+    * Rest
+    * GraphQl
+    * Websockets
+    * gRpc
+
+- Object-Oriented Design
+    * Abstraction
+        ** Only relevant, client tailored API is exposed to clients
+    * Polymorphism
+        ** Method changes behavior at runtime
+    * Inheritance
+        ** Reusing parent class functionality
+    * Encapsulation
+        ** Hiding information and keeping related functionality together
+    * Composition, Aggregation
+        ** Instead of inheritance, composition uses the object to achieve code reuse
+        ** Aggregation: Relation where A has B and B can exist without A
+        ** Composition: Relation where A has B and B can NOT exist without A
+
+
 - Open API
     * Contract Driven Design
 
@@ -16,18 +40,33 @@
     * Aggregate, Entity, Value
     * Big ball of mud
 
-- Service Oriented Architecture
-    * Service interact with each using well defined API
+- Service Oriented Architecture (Microservices)
+    * Service interacts with each other using well-defined API
+
+- Concurrency
+    * Process vs Thread.
+    * Thread Pools
 
 - Database
     * Relational
-    * Key Value Paradigm
-        ** Mongo
-        ** Cassandra
-        ** Dynamodb
+        ** popular choices: mysql, postgres, oracle, sqlserver
+    * Indexes
+    * Sharding
+    * Consistent Hashing
+    * Partitioning
+    * CAP
+    * Document Oriented Database
+        ** Key Value Paradigm
+            *** MongoDB
+            *** Cassandra
+            *** Dynamodb
+            *** CouchDB, RethinkDb
+    * Graph databases
+        * Neo4j
+    * Transaction.
     * Transaction Isolation Levels
         ** Read Committed
-        ** Repeatable Read
+        ** Repeatable Read.
         ** Read Uncommitted
         ** Serializable
     * ACID
@@ -35,10 +74,14 @@
         ** Consistent
         ** Isolated
         ** Durable
-    * Transaction
+
 
 - Caching 
-    * Redis, Memcache, aws Elasticcache 
+    * Redis, Memcache, aws Elastic Cache
+    * Eviction policies
+        * LRU
+        * Least Frequently used
+    * Caching Strategies
     * app reads from cache, if miss read from db
     * app write to db, write to cache
     * app write to cache, write to db
@@ -51,15 +94,23 @@
         * https://pact.io[pact.io]
         * https://cloud.spring.io/spring-cloud-contract/reference/html[spring cloud contract]
 
-
-- Tools for Application Performance Monitoring
+- Tools for Application Performance Monitoring (APM)
     * New Relic, Datadog, Appdynamics, Promethus
 - API Performance Monitoring
 - Infrastructure Monitoring
 - Alerting
+
 - Log or events Aggregation
     * Querying
-    * Visualtion
+    * Visualization
+
+- DevOPs
+    * Developer knows how to create, deploy and maintain their infrastructure resource
+    * Continuous Integration and Continuous deployment(CICD)
+    * Manual deployment is avoided
+    * Manual testing is minimized
+    * Process are optimized for faster release cycle
+        ** Bugs are inevitable, so we embrace them by optimizing our processes to fix them faster
 
 == Software Architecture Patterns
 
