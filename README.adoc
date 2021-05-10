@@ -92,7 +92,18 @@
   * All CORS request have an Origin header
   * Host: Domain where request will be handeled
   * Origin: Domain from where request is originated
+  ** Access-Control-Allow-Credentials
+** Access-Control-Allow-Headers
+** Access-Control-Allow-Methods
+** Access-Control-Allow-Origin
+** Access-Control-Expose-Headers
+** Access-Control-Max-Age
+** Access-Control-Request-Headers
+** Access-Control-Request-Method
 
+
+ 
+  
 - Caching 
     * Redis, Memcache, aws Elastic Cache
     * Eviction policies
