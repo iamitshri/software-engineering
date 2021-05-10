@@ -87,6 +87,12 @@
         ** Isolated
         ** Durable
 
+- CORS
+  * Cross Origin Request
+  * All CORS request have an Origin header
+  * Host: Domain where request will be handeled
+  * Origin: Domain from where request is originated
+
 - Caching 
     * Redis, Memcache, aws Elastic Cache
     * Eviction policies
