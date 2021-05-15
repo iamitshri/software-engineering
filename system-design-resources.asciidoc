@@ -1,0 +1,2832 @@
+== System Design Interview Prep Master Doc
+
+Compiled by - Pooja Biswas
+
+https://www.linkedin.com/in/pooja-biswas-467b3348/[[.underline]#pooja
+biswas | LinkedIn#]
+
+== All system design youtube channels
+
+[arabic]
+. {blank}
++
+____
+https://www.youtube.com/user/dimakorolev/videos[[.underline]#https://www.youtube.com/user/dimakorolev/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/ByteByByte/videos[[.underline]#https://www.youtube.com/c/ByteByByte/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/channel/UC_n-A84J0UcU5uq4sEh2CnQ[[.underline]#https://www.youtube.com/channel/UC_n-A84J0UcU5uq4sEh2CnQ#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/DefogTech/videos[[.underline]#https://www.youtube.com/c/DefogTech/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/HusseinNasser-software-engineering/videos[[.underline]#https://www.youtube.com/c/HusseinNasser-software-engineering/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/SystemDesignInterview/videos[[.underline]#https://www.youtube.com/c/SystemDesignInterview/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/sudoCODE/videos[[.underline]#https://www.youtube.com/c/sudoCODE/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/codeKarle/videos[[.underline]#https://www.youtube.com/c/codeKarle/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/CMUDatabaseGroup/videos[[.underline]#https://www.youtube.com/c/CMUDatabaseGroup/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/interviewingio/videos[[.underline]#https://www.youtube.com/c/interviewingio/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/GauravSensei/videos[[.underline]#https://www.youtube.com/c/GauravSensei/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/EngineeringwithUtsav/videos[[.underline]#https://www.youtube.com/c/EngineeringwithUtsav/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/channel/UClB4KPy5LkJj1t3SgYVtMOQ/videos[[.underline]#https://www.youtube.com/channel/UClB4KPy5LkJj1t3SgYVtMOQ/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/ExponentTV/videos[[.underline]#https://www.youtube.com/c/ExponentTV/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/watch?v=cQP8WApzIQQ&list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB
+____
+. {blank}
++
+____
+https://www.youtube.com/c/TheInterviewSage/videos[[.underline]#https://www.youtube.com/c/TheInterviewSage/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/ThinkSoftware/videos[[.underline]#https://www.youtube.com/c/ThinkSoftware/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/SuccessinTech/videos[[.underline]#https://www.youtube.com/c/SuccessinTech/videos#]
+____
+. {blank}
++
+____
+https://www.youtube.com/c/TechDummiesNarendraL/videos[[.underline]#https://www.youtube.com/c/TechDummiesNarendraL/videos#]
+____
+
+{empty}20.
+https://www.youtube.com/c/OktaDev/videos[[.underline]#https://www.youtube.com/c/OktaDev/videos#]
+
+Important Books :
+
+[arabic]
+. {blank}
++
+____
+https://www.amazon.com/System-Design-Interview-Insiders-Guide-ebook/dp/B08B3FWYBX[[.underline]#Amazon.com:
+System Design Interview – An Insider's Guide eBook: Xu, Alex: Kindle
+Store#]
+____
+. {blank}
++
+____
+https://www.amazon.com/Operating-Systems-Three-Easy-Pieces-ebook/dp/B00TPZ17O4/ref=sr_1_1?crid=337B4KLJRMC3L&dchild=1&keywords=three+easy+pieces&qid=1612762802&s=digital-text&sprefix=three+easy+pe%2Cdigital-text%2C347&sr=1-1[[.underline]#Amazon.com:
+Operating Systems: Three Easy Pieces eBook: Arpaci-Dusseau, Remzi,
+Arpaci-Dusseau, Andrea: Kindle Store#]
+____
+. {blank}
++
+____
+https://www.amazon.com/gp/product/0071843655/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=utsavized0d-20&creative=9325&linkCode=as2&creativeASIN=0071843655&linkId=dc26c752dbbfa35234d423c4930a0633[[.underline]#Web
+Scalability for Startup Engineers: Ejsmont, Artur: 9780071843652:
+Amazon.com: Books#]
+____
+. {blank}
++
+____
+https://www.amazon.com/gp/product/1838430202/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=utsavized0d-20&creative=9325&linkCode=as2&creativeASIN=1838430202&linkId=8f3007bbed9b958980492f5c0bb1105f[[.underline]#Understanding
+Distributed Systems: What every developer should know about large
+distributed applications: Vitillo, Roberto: 9781838430207: Amazon.com:
+Books#]
+____
+. {blank}
++
+____
+https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/ref=pd_bxgy_img_3/139-9771618-6369913?_encoding=UTF8&pd_rd_i=1449373321&pd_rd_r=d2d433b3-92c7-4f13-8449-6d683030d186&pd_rd_w=wmzY3&pd_rd_wg=UglW1&pf_rd_p=fd3ebcd0-c1a2-44cf-aba2-bbf4810b3732&pf_rd_r=58E4JP7ADDK85QX87K4B&psc=1&refRID=58E4JP7ADDK85QX87K4B[[.underline]#Designing
+Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable,
+and Maintainable Systems: Kleppmann, Martin: 9781449373320: Amazon.com:
+Books#]
+____
+. {blank}
++
+____
+https://www.amazon.com/gp/product/1491936169/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=utsavized0d-20&creative=9325&linkCode=as2&creativeASIN=1491936169&linkId=7d53f3e014096d3d379ed3f0831076f5[[.underline]#Kafka:
+The Definitive Guide: Real-Time Data and Stream Processing at Scale:
+9781491936160: Computer Science Books @ Amazon.com#]
+____
+. {blank}
++
+____
+https://www.amazon.in/Distributed-Algorithms-Intuitive-Approach-Press-dp-0262037661/dp/0262037661/ref=dp_ob_title_bk[[.underline]#Buy
+Distributed Algorithms – An Intuitive Approach 2e (The MIT Press) Book
+Online at Low Prices in India | Distributed Algorithms – An Intuitive
+Approach 2e (The MIT Press) Reviews & Ratings - Amazon.in#]
+____
+. {blank}
++
+____
+https://www.amazon.in/Elasticsearch-Definitive-Distributed-Real-Time-Analytics-ebook/dp/B00SLXVBC4[[.underline]#Elasticsearch:
+The Definitive Guide: A Distributed Real-Time Search and Analytics
+Engine eBook: Gormley, Clinton, Tong, Zachary: Amazon.in: Kindle Store#]
+____
+. {blank}
++
+____
+https://www.amazon.in/Cassandra-Definitive-Guide-Jeff-Carpenter/dp/1098115163[[.underline]#Buy
+Cassandra – The Definitive Guide, 3e: Distributed Data at Web Scale Book
+Online at Low Prices in India | Cassandra – The Definitive Guide, 3e:
+Distributed Data at Web Scale Reviews & Ratings - Amazon.in#]
+____
+
+== Imp keywords
+
+ 
+
+[arabic]
+. {blank}
++
+____
+Write ahead logging
+____
+. {blank}
++
+____
+SSL passthrough / termination on load balancers
+____
+. {blank}
++
+____
+Clock vectors
+____
+. {blank}
++
+____
+Hinted handoff
+____
+. {blank}
++
+____
+Bloom filters
+____
+. {blank}
++
+____
+Gossip protocols
+____
+. {blank}
++
+____
+Merkle trees
+____
+. {blank}
++
+____
+Paxos algorithm
+____
+. {blank}
++
+____
+Two phase commit
+____
+. {blank}
++
+____
+Two phase locking
+____
+. {blank}
++
+____
+Consistent hashing
+____
+. {blank}
++
+____
+Data replication
+____
+. {blank}
++
+____
+Total order broadcast
+____
+. {blank}
++
+____
+Write ahead logging
+____
+. {blank}
++
+____
+Isolation levels (read uncomitted, read comitted, repeatable read,
+serializable)
+____
+. {blank}
++
+____
+Quad trees (GeoHashin)
+____
+. {blank}
++
+____
+Inverse indexing - Google search/any search indexing
+____
+. {blank}
++
+____
+Gaming ranking - rank players based on score and faster.
+____
+. {blank}
++
+____
+Word search in trie - auto suggestions system design
+____
+. {blank}
++
+____
+Sort 5gb data in 1gb memory - merge sort
+____
+. {blank}
++
+____
+Paxos algo
+____
+. {blank}
++
+____
+Merkle Tree
+____
+. {blank}
++
+____
+Backpressure
+____
+. {blank}
++
+____
+Circuit breaker
+____
+. {blank}
++
+____
+Raft
+____
+. {blank}
++
+____
+Service discovery
+____
+. {blank}
++
+____
+Saga
+____
+. {blank}
++
+____
+Hyperloglog
+____
+
+____
+ 
+
+ 
+
+ 
+____
+
+== Important algorithms
+
+____
+https://github.com/resumejob/system-design-algorithms[[.underline]#https://github.com/resumejob/system-design-algorithms#]
+____
+
+* {blank}
++
+____
+Frugal Streaming
+____
+* {blank}
++
+____
+Geohash / S2 Geometry
+____
+* {blank}
++
+____
+Leaky bucket / Token bucket
+____
+* {blank}
++
+____
+Loosy Counting
+____
+* {blank}
++
+____
+Operational transformation
+____
+* {blank}
++
+____
+Quadtree / Rtree
+____
+* {blank}
++
+____
+Ray casting
+____
+* {blank}
++
+____
+Reverse index
+____
+* {blank}
++
+____
+Rsync algorithm
+____
+* {blank}
++
+____
+Trie algorithm
+____
+
+* {blank}
++
+____
+Consistent Hashing
+____
+* {blank}
++
+____
+Count-Min Sketch
+____
+* {blank}
++
+____
+Bloom Filters
+____
+* {blank}
++
+____
+HyperLogLog
+____
+* {blank}
++
+____
+Skip Lists
+____
+* {blank}
++
+____
+LRU
+____
+* {blank}
++
+____
+B tree
+____
+* {blank}
++
+____
+Hierarchical Timing Wheels
+https://blog.acolyer.org/2015/11/23/hashed-and-hierarchical-timing-wheels/[[.underline]#https://blog.acolyer.org/2015/11/23/hashed-and-hierarchical-timing-wheels/#]
+____
+* {blank}
++
+____
+Merkle trees
+____
+* {blank}
++
+____
+Fenwick Tree
+- http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=2FDD6F53D3DC3BB91FA42E7277B6765B?doi=10.1.1.14.8917&rep=rep1&type=pdf[[.underline]#http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=2FDD6F53D3DC3BB91FA42E7277B6765B?doi=10.1.1.14.8917&rep=rep1&type=pdf#]
+____
+* {blank}
++
+____
+AMS (Alon Matias Szegedy) algorithm
+____
+
+== 
+
+== 
+
+== Cloud design patterns
+
+____
+https://docs.microsoft.com/en-us/azure/architecture/patterns/index-patterns[[.underline]#https://docs.microsoft.com/en-us/azure/architecture/patterns/index-patterns#]
+
+Cloud arch pattern
+
+ 
+____
+
+[cols=",,",options="header",]
+|===
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/ambassador[[.underline]#Ambassador#]
+|Create helper services that send network requests on behalf of a
+consumer service or application. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer[[.underline]#Anti-Corruption
+Layer#] |Implement a façade or adapter layer between a modern
+application and a legacy system. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/async-request-reply[[.underline]#Asynchronous
+Request-Reply#] |Decouple backend processing from a frontend host, where
+backend processing needs to be asynchronous, but the frontend still
+needs a clear response.
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends[[.underline]#Backends
+for Frontends#] |Create separate backend services to be consumed by
+specific frontend applications or interfaces.
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/bulkhead[[.underline]#Bulkhead#]
+|Isolate elements of an application into pools so that if one fails, the
+others will continue to function.
+|https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside[[.underline]#Cache-Aside#]
+|Load data on demand into a cache from a data store a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management[[.underline]#Data
+Management#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography[[.underline]#Choreography#]
+|Let each service decide when and how a business operation is processed,
+instead of depending on a central orchestrator. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker[[.underline]#Circuit
+Breaker#] |Handle faults that might take a variable amount of time to
+fix when connecting to a remote service or resource.
+|https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/claim-check[[.underline]#Claim
+Check#] |Split a large message into a claim check and a payload to avoid
+overwhelming a message bus.
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction[[.underline]#Compensating
+Transaction#] |Undo the work performed by a series of steps, which
+together define an eventually consistent operation.
+|https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers[[.underline]#Competing
+Consumers#] |Enable multiple concurrent consumers to process messages
+received on the same messaging channel.
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/compute-resource-consolidation[[.underline]#Compute
+Resource Consolidation#] |Consolidate multiple tasks or operations into
+a single computational unit
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs[[.underline]#CQRS#]
+|Segregate operations that read data from operations that update data by
+using separate interfaces. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management[[.underline]#Data
+Management#],
+
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/deployment-stamp[[.underline]#Deployment
+Stamps#] |Deploy multiple independent copies of application components,
+including data stores. a|
+https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing[[.underline]#Event
+Sourcing#] |Use an append-only store to record the full series of events
+that describe actions taken on data in a domain. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management[[.underline]#Data
+Management#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/external-configuration-store[[.underline]#External
+Configuration Store#] |Move configuration information out of the
+application deployment package to a centralized location. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/federated-identity[[.underline]#Federated
+Identity#] |Delegate authentication to an external identity provider.
+|https://docs.microsoft.com/en-us/azure/architecture/framework/security/security-patterns[[.underline]#Security#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/gatekeeper[[.underline]#Gatekeeper#]
+|Protect applications and services by using a dedicated host instance
+that acts as a broker between clients and the application or service,
+validates and sanitizes requests, and passes requests and data between
+them.
+|https://docs.microsoft.com/en-us/azure/architecture/framework/security/security-patterns[[.underline]#Security#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation[[.underline]#Gateway
+Aggregation#] |Use a gateway to aggregate multiple individual requests
+into a single request. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-offloading[[.underline]#Gateway
+Offloading#] |Offload shared or specialized service functionality to a
+gateway proxy. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-routing[[.underline]#Gateway
+Routing#] |Route requests to multiple services using a single endpoint.
+a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/geodes[[.underline]#Geodes#]
+|Deploy backend services into a set of geographical nodes, each of which
+can service any client request in any region. a|
+https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring[[.underline]#Health
+Endpoint Monitoring#] |Implement functional checks in an application
+that external tools can access through exposed endpoints at regular
+intervals. a|
+https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/index-table[[.underline]#Index
+Table#] |Create indexes over the fields in data stores that are
+frequently referenced by queries. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management[[.underline]#Data
+Management#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/leader-election[[.underline]#Leader
+Election#] |Coordinate the actions performed by a collection of
+collaborating task instances in a distributed application by electing
+one instance as the leader that assumes responsibility for managing the
+other instances. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view[[.underline]#Materialized
+View#] |Generate prepopulated views over the data in one or more data
+stores when the data isn't ideally formatted for required query
+operations. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management[[.underline]#Data
+Management#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters[[.underline]#Pipes
+and Filters#] |Break down a task that performs complex processing into a
+series of separate elements that can be reused. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/priority-queue[[.underline]#Priority
+Queue#] |Prioritize requests sent to services so that requests with a
+higher priority are received and processed more quickly than those with
+a lower priority. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber[[.underline]#Publisher/Subscriber#]
+|Enable an application to announce events to multiple interested
+consumers asynchronously, without coupling the senders to the receivers.
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling[[.underline]#Queue-Based
+Load Leveling#] |Use a queue that acts as a buffer between a task and a
+service that it invokes in order to smooth intermittent heavy loads. a|
+https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#],
+
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Resiliency#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/retry[[.underline]#Retry#]
+|Enable an application to handle anticipated, temporary failures when it
+tries to connect to a service or network resource by transparently
+retrying an operation that's previously failed.
+|https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/scheduler-agent-supervisor[[.underline]#Scheduler
+Agent Supervisor#] |Coordinate a set of actions across a distributed set
+of services and other remote resources. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy[[.underline]#Sequential
+Convoy#] |Process a set of related messages in a defined order, without
+blocking processing of other groups of messages.
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/category/messaging[[.underline]#Messaging#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/sharding[[.underline]#Sharding#]
+|Divide a data store into a set of horizontal partitions or shards. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management[[.underline]#Data
+Management#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar[[.underline]#Sidecar#]
+|Deploy components of an application into a separate process or
+container to provide isolation and encapsulation. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting[[.underline]#Static
+Content Hosting#] |Deploy static content to a cloud-based storage
+service that can deliver them directly to the client. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management[[.underline]#Data
+Management#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig[[.underline]#Strangler
+Fig#] |Incrementally migrate a legacy system by gradually replacing
+specific pieces of functionality with new applications and services. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation[[.underline]#Design
+and Implementation#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/devops/devops-patterns[[.underline]#Operational
+Excellence#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/throttling[[.underline]#Throttling#]
+|Control the consumption of resources used by an instance of an
+application, an individual tenant, or an entire service. a|
+https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/reliability-patterns[[.underline]#Reliability#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/performance-efficiency-patterns[[.underline]#Performance
+Efficiency#]
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/valet-key[[.underline]#Valet
+Key#] |Use a token or key that provides clients with restricted direct
+access to a specific resource or service. a|
+https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management[[.underline]#Data
+Management#],
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/security/security-patterns[[.underline]#Security#]
+
+|===
+
+____
+ 
+
+ 
+
+ 
+
+ 
+
+Data Management patterns
+____
+
+* {blank}
++
+____
+06/23/2017
+____
+
+* {blank}
++
+____
++3
+____
+
+____
+Data management is the key element of cloud applications, and influences
+most of the quality attributes. Data is typically hosted in different
+locations and across multiple servers for reasons such as performance,
+scalability or availability, and this can present a range of challenges.
+For example, data consistency must be maintained, and data will
+typically need to be synchronized across different locations.
+
+Additionally data should be protected at rest, in transit, and via
+authorized access mechanisms to maintain security assurances of
+confidentiality, integrity, and availability. Refer to the Azure
+Security
+Benchmark https://docs.microsoft.com/en-us/azure/security/benchmarks/security-controls-v2-data-protection[[.underline]#Data
+Protection Control#] for more information.
+____
+
+[cols=",",options="header",]
+|===
+|*Pattern* |*Summary*
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside[[.underline]#Cache-Aside#]
+|Load data on demand into a cache from a data store
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs[[.underline]#CQRS#]
+|Segregate operations that read data from operations that update data by
+using separate interfaces.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing[[.underline]#Event
+Sourcing#] |Use an append-only store to record the full series of events
+that describe actions taken on data in a domain.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/index-table[[.underline]#Index
+Table#] |Create indexes over the fields in data stores that are
+frequently referenced by queries.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view[[.underline]#Materialized
+View#] |Generate prepopulated views over the data in one or more data
+stores when the data isn't ideally formatted for required query
+operations.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/sharding[[.underline]#Sharding#]
+|Divide a data store into a set of horizontal partitions or shards.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting[[.underline]#Static
+Content Hosting#] |Deploy static content to a cloud-based storage
+service that can deliver them directly to the client.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/valet-key[[.underline]#Valet
+Key#] |Use a token or key that provides clients with restricted direct
+access to a specific resource or service.
+|===
+
+____
+DATA MANAGEMENT PATTERNS
+
+ 
+
+ 
+
+Design and Implementation patterns
+____
+
+* {blank}
++
+____
+06/23/2017
+____
+* {blank}
++
+____
+2 minutes to read
+____
+
+____
+Good design encompasses factors such as consistency and coherence in
+component design and deployment, maintainability to simplify
+administration and development, and reusability to allow components and
+subsystems to be used in other applications and in other scenarios.
+Decisions made during the design and implementation phase have a huge
+impact on the quality and the total cost of ownership of cloud hosted
+applications and services.
+____
+
+[cols=",",options="header",]
+|===
+|*Pattern* |*Summary*
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/ambassador[[.underline]#Ambassador#]
+|Create helper services that send network requests on behalf of a
+consumer service or application.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer[[.underline]#Anti-Corruption
+Layer#] |Implement a façade or adapter layer between a modern
+application and a legacy system.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends[[.underline]#Backends
+for Frontends#] |Create separate backend services to be consumed by
+specific frontend applications or interfaces.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs[[.underline]#CQRS#]
+|Segregate operations that read data from operations that update data by
+using separate interfaces.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/compute-resource-consolidation[[.underline]#Compute
+Resource Consolidation#] |Consolidate multiple tasks or operations into
+a single computational unit
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/external-configuration-store[[.underline]#External
+Configuration Store#] |Move configuration information out of the
+application deployment package to a centralized location.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation[[.underline]#Gateway
+Aggregation#] |Use a gateway to aggregate multiple individual requests
+into a single request.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-offloading[[.underline]#Gateway
+Offloading#] |Offload shared or specialized service functionality to a
+gateway proxy.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-routing[[.underline]#Gateway
+Routing#] |Route requests to multiple services using a single endpoint.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/leader-election[[.underline]#Leader
+Election#] |Coordinate the actions performed by a collection of
+collaborating task instances in a distributed application by electing
+one instance as the leader that assumes responsibility for managing the
+other instances.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters[[.underline]#Pipes
+and Filters#] |Break down a task that performs complex processing into a
+series of separate elements that can be reused.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar[[.underline]#Sidecar#]
+|Deploy components of an application into a separate process or
+container to provide isolation and encapsulation.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/static-content-hosting[[.underline]#Static
+Content Hosting#] |Deploy static content to a cloud-based storage
+service that can deliver them directly to the client.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler-fig[[.underline]#Strangler
+Fig#] |Incrementally migrate a legacy system by gradually replacing
+specific pieces of functionality with new applications and services.
+|===
+
+____
+DESIGN AND IMPLEMENTATION PATTERNS
+
+ 
+
+ 
+
+Messaging patterns
+____
+
++4
+
+____
+The distributed nature of cloud applications requires a messaging
+infrastructure that connects the components and services, ideally in a
+loosely coupled manner in order to maximize scalability. Asynchronous
+messaging is widely used, and provides many benefits, but also brings
+challenges such as the ordering of messages, poison message management,
+idempotency, and more.
+____
+
+[cols=",",options="header",]
+|===
+|*Pattern* |*Summary*
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/async-request-reply[[.underline]#Asynchronous
+Request-Reply#] |Decouple backend processing from a frontend host, where
+backend processing needs to be asynchronous, but the frontend still
+needs a clear response.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/claim-check[[.underline]#Claim
+Check#] |Split a large message into a claim check and a payload to avoid
+overwhelming a message bus.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography[[.underline]#Choreography#]
+|Have each component of the system participate in the decision-making
+process about the workflow of a business transaction, instead of relying
+on a central point of control.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers[[.underline]#Competing
+Consumers#] |Enable multiple concurrent consumers to process messages
+received on the same messaging channel.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters[[.underline]#Pipes
+and Filters#] |Break down a task that performs complex processing into a
+series of separate elements that can be reused.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/priority-queue[[.underline]#Priority
+Queue#] |Prioritize requests sent to services so that requests with a
+higher priority are received and processed more quickly than those with
+a lower priority.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/publisher-subscriber[[.underline]#Publisher-Subscriber#]
+|Enable an application to announce events to multiple interested
+consumers asynchronously, without coupling the senders to the receivers.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling[[.underline]#Queue-Based
+Load Leveling#] |Use a queue that acts as a buffer between a task and a
+service that it invokes in order to smooth intermittent heavy loads.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/scheduler-agent-supervisor[[.underline]#Scheduler
+Agent Supervisor#] |Coordinate a set of actions across a distributed set
+of services and other remote resources.
+
+|https://docs.microsoft.com/en-us/azure/architecture/patterns/sequential-convoy[[.underline]#Sequential
+Convoy#] |Process a set of related messages in a defined order, without
+blocking processing of other groups of messages.
+|===
+
+____
+MESSAGING PATTERNS
+
+ 
+
+ 
+
+ 
+
+Book
+https://learning.oreilly.com/library/view/cloud-architecture-patterns/9781449357979/[[.underline]#https://learning.oreilly.com/library/view/cloud-architecture-patterns/9781449357979/#]
+____
+
+== LEETCODE all system design problems
+
+[arabic]
+. {blank}
++
+____
+Web Crawler']
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124657/Facebook-or-System-Design-or-A-web-crawler-that-will-crawl-Wikipedia[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124657/Facebook-or-System-Design-or-A-web-crawler-that-will-crawl-Wikipedia#]
+____
+
+[arabic, start=2]
+. {blank}
++
+____
+Detect web crawler
+https://leetcode.com/discuss/interview-question/system-design/548816/Amazon-or-System-Design-or-Web-Crawler-Detector[[.underline]#https://leetcode.com/discuss/interview-question/system-design/548816/Amazon-or-System-Design-or-Web-Crawler-Detector#]
+____
+. {blank}
++
+____
+Yelp
+____
+. {blank}
++
+____
+Distributed file system
+____
+. {blank}
++
+____
+URL shortening and Pastebin
+https://leetcode.com/discuss/interview-question/system-design/124804/Design-Pastebin[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124804/Design-Pastebin#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124658/Design-URL-Shortening-service-like-TinyURL[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124658/Design-URL-Shortening-service-like-TinyURL#]
+____
+
+[arabic, start=6]
+. {blank}
++
+____
+Instagram
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124802/Design-Instagram[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124802/Design-Instagram#]
+
+https://leetcode.com/discuss/interview-question/system-design/586749/design-Instagram[[.underline]#https://leetcode.com/discuss/interview-question/system-design/586749/design-Instagram#]
+
+https://leetcode.com/discuss/interview-question/system-design/719253/Design-Facebook-%3A-System-Design-Interview[[.underline]#https://leetcode.com/discuss/interview-question/system-design/719253/Design-Facebook-%3A-System-Design-Interview#]
+____
+
+[arabic, start=7]
+. {blank}
++
+____
+Dropbox.
+____
+. {blank}
++
+____
+Twitter
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124689/Design-twitter[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124689/Design-twitter#]
+____
+
+[arabic, start=9]
+. {blank}
++
+____
+Redis
+https://leetcode.com/discuss/interview-question/system-design/125751/Design-a-distributed-cache-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/125751/Design-a-distributed-cache-system#]
+____
+. {blank}
++
+____
+Youtube or Netflix
+https://leetcode.com/discuss/interview-question/system-design/733520/Design-YouTube-Very-detailed-design-with-diagrams[[.underline]#https://leetcode.com/discuss/interview-question/system-design/733520/Design-YouTube-Very-detailed-design-with-diagrams#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/144287/Design-Recommendation-System-for-Amazon-Videos[[.underline]#https://leetcode.com/discuss/interview-question/system-design/144287/Design-Recommendation-System-for-Amazon-Videos#]
+
+https://leetcode.com/discuss/interview-question/system-design/600861/System-Design-Youtube-add-click-counts[[.underline]#https://leetcode.com/discuss/interview-question/system-design/600861/System-Design-Youtube-add-click-counts#]
+
+https://leetcode.com/discuss/interview-question/system-design/557250/Design-a-video-streaming-service-to-support-playback-video-from-different-devices[[.underline]#https://leetcode.com/discuss/interview-question/system-design/557250/Design-a-video-streaming-service-to-support-playback-video-from-different-devices#]
+
+https://leetcode.com/discuss/interview-question/system-design/496042/Design-video-sharing-platform-like-Youtube[[.underline]#https://leetcode.com/discuss/interview-question/system-design/496042/Design-video-sharing-platform-like-Youtube#]
+
+https://leetcode.com/discuss/interview-question/system-design/158698/Distributed-database%3A-Netflix[[.underline]#https://leetcode.com/discuss/interview-question/system-design/158698/Distributed-database%3A-Netflix#]
+
+https://leetcode.com/discuss/interview-question/system-design/124565/Design-Netflix-recommendation-engine[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124565/Design-Netflix-recommendation-engine#]
+
+https://leetcode.com/discuss/interview-question/system-design/150607/Design-youtube[[.underline]#https://leetcode.com/discuss/interview-question/system-design/150607/Design-youtube#]
+____
+
+[arabic, start=11]
+. {blank}
++
+____
+Ticketmaster
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124803/Design-BookMyShow[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124803/Design-BookMyShow#]
+
+https://leetcode.com/discuss/interview-question/system-design/315763/System-Design-or-Seat-reservation-application-like-Ticket-Master-or-BookMyShow[[.underline]#https://leetcode.com/discuss/interview-question/system-design/315763/System-Design-or-Seat-reservation-application-like-Ticket-Master-or-BookMyShow#]
+____
+
+[arabic, start=12]
+. {blank}
++
+____
+Facebook Messenger or WhatsApp
+https://leetcode.com/discuss/interview-question/system-design/585930/Amazon-or-System-Design-or-Design-a-Chat-Service[[.underline]#https://leetcode.com/discuss/interview-question/system-design/585930/Amazon-or-System-Design-or-Design-a-Chat-Service#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/220073/How-would-you-design-WhatsApp[[.underline]#https://leetcode.com/discuss/interview-question/system-design/220073/How-would-you-design-WhatsApp#]
+
+https://leetcode.com/discuss/interview-question/system-design/124613/Amazon-or-System-Design-or-A-scalable-chat-application-on-phone-browsing[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124613/Amazon-or-System-Design-or-A-scalable-chat-application-on-phone-browsing#]
+____
+
+[arabic, start=13]
+. {blank}
++
+____
+Typeahead suggesions.
+____
+. {blank}
++
+____
+Twitter search.
+____
+. {blank}
++
+____
+Newsfeed ranking
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/349627/How-do-you-design-a-meta-data-for-a-news-feed[[.underline]#https://leetcode.com/discuss/interview-question/system-design/349627/How-do-you-design-a-meta-data-for-a-news-feed#]
+
+https://leetcode.com/discuss/interview-question/system-design/153871/Design-a-News-Feed-system-(like-Facebook-Linkedin-etc.)[[.underline]#https://leetcode.com/discuss/interview-question/system-design/153871/Design-a-News-Feed-system-(like-Facebook-Linkedin-etc.)#]
+____
+
+[arabic, start=16]
+. {blank}
++
+____
+Web search.
+____
+. {blank}
++
+____
+LinkedIn "you may know ...".,
+https://leetcode.com/discuss/interview-question/system-design/1036762/Google-Onsite-System-Design-How-to-do-it[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1036762/Google-Onsite-System-Design-How-to-do-it#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/153941/Design-the-%22People-You-May-Know%22-feature-on-LinkedIn-or-Facebook[[.underline]#https://leetcode.com/discuss/interview-question/system-design/153941/Design-the-%22People-You-May-Know%22-feature-on-LinkedIn-or-Facebook#].
+____
+
+[arabic, start=18]
+. {blank}
++
+____
+Uber / Luxe (anti-uber)?
+____
+. {blank}
++
+____
+Freight / delivery orchestration? (edited) 
+____
+. {blank}
++
+____
+Botnet/decentralized web crawler/torrent
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/594844/System-design-question-Help-needed[[.underline]#https://leetcode.com/discuss/interview-question/system-design/594844/System-design-question-Help-needed#]
+
+https://leetcode.com/discuss/interview-question/system-design/464997/Design-a-P2P-file-sharing-application-like-BitTorrent[[.underline]#https://leetcode.com/discuss/interview-question/system-design/464997/Design-a-P2P-file-sharing-application-like-BitTorrent#]
+____
+
+[arabic, start=21]
+. {blank}
++
+____
+Coupon redeeming system
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/353302/Design-a-couponvoucher-management-system-or-DellEMC[[.underline]#https://leetcode.com/discuss/interview-question/system-design/353302/Design-a-couponvoucher-management-system-or-DellEMC#]
+
+https://leetcode.com/discuss/interview-question/system-design/459593/Facebook-or-System-Design-or-E-commerce-Apply-discount-on-every-nth-order[[.underline]#https://leetcode.com/discuss/interview-question/system-design/459593/Facebook-or-System-Design-or-E-commerce-Apply-discount-on-every-nth-order#]
+____
+
+[arabic, start=22]
+. {blank}
++
+____
+Message queue kafka, service bus
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124761/Deciding-which-queue-to-send-a-post-to[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124761/Deciding-which-queue-to-send-a-post-to#]
+
+https://leetcode.com/discuss/interview-question/system-design/206134/Amazon-or-System-Design-or-Design-a-Distributed-Message-queue[[.underline]#https://leetcode.com/discuss/interview-question/system-design/206134/Amazon-or-System-Design-or-Design-a-Distributed-Message-queue#]
+
+https://leetcode.com/discuss/interview-question/system-design/734303/Microsoftor-Design-an-Enterprise-Service-Bus[[.underline]#https://leetcode.com/discuss/interview-question/system-design/734303/Microsoftor-Design-an-Enterprise-Service-Bus#]
+____
+
+[arabic, start=23]
+. {blank}
++
+____
+Rate limiter
+https://leetcode.com/discuss/interview-question/system-design/637402/Design-a-efficient-client-side-rate-limit-handler[[.underline]#https://leetcode.com/discuss/interview-question/system-design/637402/Design-a-efficient-client-side-rate-limit-handler#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124558/Uber-or-Rate-Limiter[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124558/Uber-or-Rate-Limiter#]
+____
+
+[arabic, start=24]
+. {blank}
++
+____
+Design leetcode - asked in amazon and fb.
+https://leetcode.com/discuss/interview-question/system-design/649021/Design-Leetcode[[.underline]#https://leetcode.com/discuss/interview-question/system-design/649021/Design-Leetcode#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/409736/Facebook-or-System-Design-or-Hacker-Rank-LeetCode-Contest-Leadership-Board-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/409736/Facebook-or-System-Design-or-Hacker-Rank-LeetCode-Contest-Leadership-Board-System#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/308452/System-Design-or-Programming-contest-platform-like-LeetCode[[.underline]#https://leetcode.com/discuss/interview-question/system-design/308452/System-Design-or-Programming-contest-platform-like-LeetCode#]
+____
+
+[arabic, start=26]
+. {blank}
++
+____
+Large log data collection and processing system
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124603/Amazon-or-Phone-screen-or-How-to-handle-large-log-data[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124603/Amazon-or-Phone-screen-or-How-to-handle-large-log-data#] +
+https://leetcode.com/discuss/interview-question/system-design/128037/How-would-you-parse-a-huge-log-file[[.underline]#https://leetcode.com/discuss/interview-question/system-design/128037/How-would-you-parse-a-huge-log-file#]
+
+https://leetcode.com/discuss/interview-question/system-design/189030/Design-a-system-which-can-report-frequently-occurring-exceptions-on-a-dashboard[[.underline]#https://leetcode.com/discuss/interview-question/system-design/189030/Design-a-system-which-can-report-frequently-occurring-exceptions-on-a-dashboard#]
+
+https://leetcode.com/discuss/interview-question/system-design/196142/Copy-coredump-files-from-millions-of-system-to-single-Storage-server-like-S3[[.underline]#https://leetcode.com/discuss/interview-question/system-design/196142/Copy-coredump-files-from-millions-of-system-to-single-Storage-server-like-S3#]
+
+https://leetcode.com/discuss/interview-question/system-design/431023/Google-or-Onsite-or-Get-all-logs-between-times[[.underline]#https://leetcode.com/discuss/interview-question/system-design/431023/Google-or-Onsite-or-Get-all-logs-between-times#]
+
+https://leetcode.com/discuss/interview-question/system-design/440546/Facebook-or-System-Design-Onsite-or-Compute-Percentile-Metrics-Over-Time-Series[[.underline]#https://leetcode.com/discuss/interview-question/system-design/440546/Facebook-or-System-Design-Onsite-or-Compute-Percentile-Metrics-Over-Time-Series#]
+
+https://leetcode.com/discuss/interview-question/system-design/124603/Amazon-or-Phone-screen-or-How-to-handle-large-log-data[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124603/Amazon-or-Phone-screen-or-How-to-handle-large-log-data#]
+
+https://leetcode.com/discuss/interview-question/system-design/1133962/Service-which-will-download-data-from-multiple-sources-and-ingests-it-in-the-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1133962/Service-which-will-download-data-from-multiple-sources-and-ingests-it-in-the-system#]
+
+https://leetcode.com/discuss/interview-question/system-design/942087/System-Design%3A-Design-a-system-to-process-data-in-different-formats-from-different-sources[[.underline]#https://leetcode.com/discuss/interview-question/system-design/942087/System-Design%3A-Design-a-system-to-process-data-in-different-formats-from-different-sources#]
+
+https://leetcode.com/discuss/interview-question/system-design/852238/Need-help-with-System-Design-problem-asked-in-a-real-interview[[.underline]#https://leetcode.com/discuss/interview-question/system-design/852238/Need-help-with-System-Design-problem-asked-in-a-real-interview#]
+
+https://leetcode.com/discuss/interview-question/system-design/820877/Bloomberg-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/820877/Bloomberg-System-Design#]
+
+https://leetcode.com/discuss/interview-question/system-design/778868/Facebook-oror-Onsite-oror-System-Design-Aggregation-click-events[[.underline]#https://leetcode.com/discuss/interview-question/system-design/778868/Facebook-oror-Onsite-oror-System-Design-Aggregation-click-events#]
+
+https://leetcode.com/discuss/interview-question/system-design/725364/System-Design-or-IOT-sensor-data-aggregator[[.underline]#https://leetcode.com/discuss/interview-question/system-design/725364/System-Design-or-IOT-sensor-data-aggregator#]
+
+https://leetcode.com/discuss/interview-question/system-design/202946/Design-a-system-to-aggregate-metrics-from-large-cluster(800%2B)-of-web-servers[[.underline]#https://leetcode.com/discuss/interview-question/system-design/202946/Design-a-system-to-aggregate-metrics-from-large-cluster(800%2B)-of-web-servers#]
+____
+
+[arabic, start=27]
+. {blank}
++
+____
+Realtime stock price monitoring system/ live score update cricbuzz,
+realtime gaming score
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/625918/Amazon-or-System-Design-or-Design-a-real-time-gaming-ranking-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/625918/Amazon-or-System-Design-or-Design-a-real-time-gaming-ranking-system#]
+
+https://leetcode.com/discuss/interview-question/system-design/431712/Bloomberg-or-Design-a-system-to-give-prices-of-a-stock[[.underline]#https://leetcode.com/discuss/interview-question/system-design/431712/Bloomberg-or-Design-a-system-to-give-prices-of-a-stock#]
+____
+
+[arabic, start=28]
+. {blank}
++
+____
+Stock trading system
+https://medium.com/@narengowda/stock-exchange-system-design-answered-ad4be1345851[[.underline]#https://medium.com/@narengowda/stock-exchange-system-design-answered-ad4be1345851#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/820877/Bloomberg-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/820877/Bloomberg-System-Design#]
+
+https://leetcode.com/discuss/interview-question/system-design/124794/Design-a-Multicurrency-trading-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124794/Design-a-Multicurrency-trading-system#]
+
+https://leetcode.com/discuss/interview-question/system-design/490034/FAANG-or-Onsite-or-Intern-or-System-Design-Stock[[.underline]#https://leetcode.com/discuss/interview-question/system-design/490034/FAANG-or-Onsite-or-Intern-or-System-Design-Stock#]
+____
+
+[arabic, start=29]
+. {blank}
++
+____
+Kill switch for stopping stock trading
+https://leetcode.com/discuss/interview-question/system-design/124553/Kill-Switch[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124553/Kill-Switch#]
+____
+. {blank}
++
+____
+Design network fail over
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124598/Design-network-fail-over[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124598/Design-network-fail-over#]
+____
+
+[arabic, start=31]
+. {blank}
++
+____
+Design AB testing framework
+https://leetcode.com/discuss/interview-question/system-design/124595/AB-Testing[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124595/AB-Testing#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/228661/Design-a-Data-Experimentation-platform[[.underline]#https://leetcode.com/discuss/interview-question/system-design/228661/Design-a-Data-Experimentation-platform#]
+____
+
+[arabic, start=32]
+. {blank}
++
+____
+Design parking lot system
+https://leetcode.com/discuss/interview-question/system-design/124576/Design-a-parking-lot-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124576/Design-a-parking-lot-system#].
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/575186/Design-a-Parking-Spot-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/575186/Design-a-Parking-Spot-System#]
+
+https://leetcode.com/discuss/interview-question/system-design/598634/Microsoft-or-Onsite-or-System-Design-or-SDE-2[[.underline]#https://leetcode.com/discuss/interview-question/system-design/598634/Microsoft-or-Onsite-or-System-Design-or-SDE-2#]
+
+https://leetcode.com/discuss/interview-question/system-design/850712/System-Design-Amazon-2020-(SDE-2)[[.underline]#https://leetcode.com/discuss/interview-question/system-design/850712/System-Design-Amazon-2020-(SDE-2)#]
+
+https://leetcode.com/discuss/interview-question/system-design/765686/System-Design-Interview-Question%3A-Parking-Lot-or-Low-Level-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/765686/System-Design-Interview-Question%3A-Parking-Lot-or-Low-Level-Design#]
+
+https://leetcode.com/discuss/interview-question/system-design/125260/Parking-Lots-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/125260/Parking-Lots-Design#]
+____
+
+[arabic, start=33]
+. {blank}
++
+____
+Reccomendation Engine
+https://leetcode.com/discuss/interview-question/system-design/124565/Design-Netflix-recommendation-engine[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124565/Design-Netflix-recommendation-engine#]
+____
+. {blank}
++
+____
+Smart voice assistant like siri, alexa
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124566/Design-AlexaSiriGoogle-Home-Architecture[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124566/Design-AlexaSiriGoogle-Home-Architecture#]
+
+https://leetcode.com/discuss/interview-question/system-design/848252/Amazon-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/848252/Amazon-System-Design#]
+____
+
+[arabic, start=35]
+. {blank}
++
+____
+Nearest store location, another variation of topk
+https://leetcode.com/discuss/interview-question/system-design/124567/Nearest-Store-Locators[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124567/Nearest-Store-Locators#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/533061/How-to-implement-nearest-location-kind-of-functionality-in-a-google-map-type-application[[.underline]#https://leetcode.com/discuss/interview-question/system-design/533061/How-to-implement-nearest-location-kind-of-functionality-in-a-google-map-type-application#]
+
+https://leetcode.com/discuss/interview-question/system-design/154172/Design-google-map-database[[.underline]#https://leetcode.com/discuss/interview-question/system-design/154172/Design-google-map-database#]
+____
+
+[arabic, start=36]
+. {blank}
++
+____
+Job scheduling sytem
+https://leetcode.com/discuss/interview-question/system-design/124697/Walmartlabs-onsite[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124697/Walmartlabs-onsite#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124786/Google-Scheduling-Job-Involving-both-RAM-and-CPU[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124786/Google-Scheduling-Job-Involving-both-RAM-and-CPU#]
+
+https://leetcode.com/discuss/interview-question/system-design/692996/Microsoft-System-Design-Please-help[[.underline]#https://leetcode.com/discuss/interview-question/system-design/692996/Microsoft-System-Design-Please-help#]
+
+https://leetcode.com/discuss/interview-question/system-design/553563/Googleor-Distributed-SystemorPerformance[[.underline]#https://leetcode.com/discuss/interview-question/system-design/553563/Googleor-Distributed-SystemorPerformance#]
+
+https://leetcode.com/discuss/interview-question/system-design/344524/Amazon-or-Design-a-JobTask-Scheduler[[.underline]#https://leetcode.com/discuss/interview-question/system-design/344524/Amazon-or-Design-a-JobTask-Scheduler#]
+
+https://leetcode.com/discuss/interview-question/system-design/124672/Implement-a-task-scheduler[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124672/Implement-a-task-scheduler#]
+____
+
+[arabic, start=37]
+. {blank}
++
+____
+Elevator system
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/149264/Design-an-Elevator-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/149264/Design-an-Elevator-system#]
+____
+
+[arabic, start=38]
+. {blank}
++
+____
+Malware detection system
+https://leetcode.com/discuss/interview-question/system-design/1019028/FB-or-System-Design-or-Multi-Engine-Malware-Analyzer[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1019028/FB-or-System-Design-or-Multi-Engine-Malware-Analyzer#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/150610/Design-a-malware-detection-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/150610/Design-a-malware-detection-system#]
+____
+
+[arabic, start=39]
+. {blank}
++
+____
+Garbage collector
+____
+. {blank}
++
+____
+Google docs
+https://leetcode.com/discuss/interview-question/system-design/148187/System-Design-or-Google-Docs[[.underline]#https://leetcode.com/discuss/interview-question/system-design/148187/System-Design-or-Google-Docs#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/148187/System-Design-or-Google-Docs[[.underline]#https://leetcode.com/discuss/interview-question/system-design/148187/System-Design-or-Google-Docs#]
+
+https://leetcode.com/discuss/interview-question/system-design/208207/Design-a-Google-Sheet-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/208207/Design-a-Google-Sheet-System#]
+
+https://leetcode.com/discuss/interview-question/system-design/349669/Google-SWE-L5-or-Onsite-or-Design-Google-Docs-Versioning-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/349669/Google-SWE-L5-or-Onsite-or-Design-Google-Docs-Versioning-System#]
+
+https://leetcode.com/discuss/interview-question/system-design/322448/Content-Management-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/322448/Content-Management-System-Design#]
+
+https://leetcode.com/discuss/interview-question/system-design/194402/Design-a-file-sharing-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/194402/Design-a-file-sharing-system#]
+____
+
+[arabic, start=41]
+. {blank}
++
+____
+Ecommerce Price checker system
+https://leetcode.com/discuss/interview-question/system-design/140742/E-commerce-(Amazon)Website-looking-into-other-competitor-Website-products-prices-and-update[[.underline]#https://leetcode.com/discuss/interview-question/system-design/140742/E-commerce-(Amazon)Website-looking-into-other-competitor-Website-products-prices-and-update#]
+____
+. {blank}
++
+____
+Notification system
+https://leetcode.com/discuss/interview-question/system-design/138097/Design-Notification-Service-for-Amazon-Alexa[[.underline]#https://leetcode.com/discuss/interview-question/system-design/138097/Design-Notification-Service-for-Amazon-Alexa#]
+____
+. {blank}
++
+____
+Online ludo game
+____
+. {blank}
++
+____
+metric monitoring service
+____
+. {blank}
++
+____
+Ecommerce site ,Shopping cart, product catalog, payment gateway
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/211415/Interview-Question-Ecommerce-System-design-(-Eg-%3A-Amazon-)%3A-Concurrency-issues-handling[[.underline]#https://leetcode.com/discuss/interview-question/system-design/211415/Interview-Question-Ecommerce-System-design-(-Eg-%3A-Amazon-)%3A-Concurrency-issues-handling#]
+
+https://leetcode.com/discuss/interview-question/system-design/589546/Amazon-or-System-Design-or-Amazon-Order-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/589546/Amazon-or-System-Design-or-Amazon-Order-System#]
+
+https://leetcode.com/discuss/interview-question/system-design/675539/System-Design-question-asked-in-interview[[.underline]#https://leetcode.com/discuss/interview-question/system-design/675539/System-Design-question-asked-in-interview#]
+
+https://leetcode.com/discuss/interview-question/system-design/666792/Microsoft-or-System-design-or-Please-help[[.underline]#https://leetcode.com/discuss/interview-question/system-design/666792/Microsoft-or-System-design-or-Please-help#]
+
+https://leetcode.com/discuss/interview-question/system-design/1124722/System-Design-or-Shopping-Cart-or-Payment-Gateway-or-Product-Catalog[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1124722/System-Design-or-Shopping-Cart-or-Payment-Gateway-or-Product-Catalog#]
+
+https://leetcode.com/discuss/interview-question/system-design/886390/Design-Recommendation-API-or-Akamai-Interview[[.underline]#https://leetcode.com/discuss/interview-question/system-design/886390/Design-Recommendation-API-or-Akamai-Interview#]
+
+https://leetcode.com/discuss/interview-question/system-design/776927/Design-an-accountpayment-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/776927/Design-an-accountpayment-system#]
+
+https://leetcode.com/discuss/interview-question/system-design/706038/System-Design-Payment-System-Wallet-system-Payment-gateway[[.underline]#https://leetcode.com/discuss/interview-question/system-design/706038/System-Design-Payment-System-Wallet-system-Payment-gateway#]
+____
+
+[arabic, start=46]
+. {blank}
++
+____
+Seller summary page
+https://leetcode.com/discuss/interview-question/system-design/124612/Phone-Interview-Question%3A-Design-an-Seller-Summary-Page[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124612/Phone-Interview-Question%3A-Design-an-Seller-Summary-Page#]
+____
+. {blank}
++
+____
+Customer who bought this also bought
+https://leetcode.com/discuss/interview-question/system-design/124557/Amazon's-%22Customers-who-bought-this-item-also-bought%22-recommendation-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124557/Amazon's-%22Customers-who-bought-this-item-also-bought%22-recommendation-system#]
+____
+. {blank}
++
+____
+Distributed key value store,
+https://leetcode.com/discuss/interview-question/system-design/1120468/Design-Assignment-or-Implement-a-distributed-Key-Value-(KV)-store-or-SE-Role-Avalara[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1120468/Design-Assignment-or-Implement-a-distributed-Key-Value-(KV)-store-or-SE-Role-Avalara#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/747591/Amazon-or-Onsite-or-System-design-or-Please-help[[.underline]#https://leetcode.com/discuss/interview-question/system-design/747591/Amazon-or-Onsite-or-System-design-or-Please-help#]
+____
+
+[arabic, start=49]
+. {blank}
++
+____
+Facebook live commenting
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/583184/FBInstagram-'Live-Comments'-System-design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/583184/FBInstagram-'Live-Comments'-System-design#]
+____
+
+[arabic, start=50]
+. {blank}
++
+____
+Facebook status search
+____
+. {blank}
++
+____
+Image editing ( asked in fb 2021)
+https://leetcode.com/discuss/interview-question/system-design/1077411/Facebook-or-Onsite-2021-or-System-Design-or-Design-image-editing[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1077411/Facebook-or-Onsite-2021-or-System-Design-or-Design-image-editing#]
+____
+. {blank}
++
+____
+File download application system
+https://leetcode.com/discuss/interview-question/system-design/1071562/Design-a-File-Download-Application-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1071562/Design-a-File-Download-Application-System#]
+____
+. {blank}
++
+____
+Proximity server
+https://leetcode.com/discuss/interview-question/system-design/923677/Facebook-or-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/923677/Facebook-or-System-Design#]
+____
+. {blank}
++
+____
+Top N songs, another top k problem
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124702/Design-a-service-to-calculate-the-top-k-listened-songs-in-past-24-hours[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124702/Design-a-service-to-calculate-the-top-k-listened-songs-in-past-24-hours#]
+
+https://leetcode.com/discuss/interview-question/system-design/243604/Design-a-real-time-dashboard-showing-the-most-played-songs[[.underline]#https://leetcode.com/discuss/interview-question/system-design/243604/Design-a-real-time-dashboard-showing-the-most-played-songs#]
+____
+
+[arabic, start=55]
+. {blank}
++
+____
+Privacy setting at facebook
+____
+. {blank}
++
+____
+Distributed configuration management system
+____
+. {blank}
++
+____
+Design gmail
+https://leetcode.com/discuss/interview-question/system-design/1014986/Google-or-Onsite-or-System-Design%3A-Design-an-Email-system-like-GMAIL[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1014986/Google-or-Onsite-or-System-Design%3A-Design-an-Email-system-like-GMAIL#]
+____
+. {blank}
++
+____
+News reading feature in alexa
+https://leetcode.com/discuss/interview-question/system-design/1014181/Amazon-or-System-Design-or-SDE2[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1014181/Amazon-or-System-Design-or-SDE2#]
+____
+. {blank}
++
+____
+Ads click visualisation system
+https://leetcode.com/discuss/interview-question/system-design/1002923/Facebook-or-Online-or-Real-time-data-visualization-for-ads-clicks[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1002923/Facebook-or-Online-or-Real-time-data-visualization-for-ads-clicks#]
+____
+. {blank}
++
+____
+IoT devices management system
+https://leetcode.com/discuss/interview-question/system-design/974890/Design-a-system-for-management-of-IOT-devices[[.underline]#https://leetcode.com/discuss/interview-question/system-design/974890/Design-a-system-for-management-of-IOT-devices#]
+____
+. {blank}
++
+____
+Timer service
+https://leetcode.com/discuss/interview-question/system-design/973207/System-Design-or-Timer-service[[.underline]#https://leetcode.com/discuss/interview-question/system-design/973207/System-Design-or-Timer-service#]
+____
+. {blank}
++
+____
+Service monitoring and alerting system like pagerduty, azure monitor
+etc +
+https://leetcode.com/discuss/interview-question/system-design/958919/System-Design-Interview-or-Service-Health-Monitoring-and-Alerting-Service[[.underline]#https://leetcode.com/discuss/interview-question/system-design/958919/System-Design-Interview-or-Service-Health-Monitoring-and-Alerting-Service#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/287678/Design-a-monitoring-or-analytics-service-like-Datadog-or-SignalFx[[.underline]#https://leetcode.com/discuss/interview-question/system-design/287678/Design-a-monitoring-or-analytics-service-like-Datadog-or-SignalFx#]
+____
+
+[arabic, start=63]
+. {blank}
++
+____
+Load balancer
+https://leetcode.com/discuss/interview-question/system-design/943352/Facebook-or-E5-System-Design-Interview-Question-or-Menlo-Park[[.underline]#https://leetcode.com/discuss/interview-question/system-design/943352/Facebook-or-E5-System-Design-Interview-Question-or-Menlo-Park#]
+____
+. {blank}
++
+____
+Design undergeound system
+____
+. {blank}
++
+____
+Leader board table design
+https://leetcode.com/discuss/interview-question/system-design/892083/Leaderboard-table-system-design-for-online-game[[.underline]#https://leetcode.com/discuss/interview-question/system-design/892083/Leaderboard-table-system-design-for-online-game#]
+____
+. {blank}
++
+____
+Slot booking system for playarena etc
+https://leetcode.com/discuss/interview-question/system-design/880581/Event-Booking-for-playarenas-Low-level-design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/880581/Event-Booking-for-playarenas-Low-level-design#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/423613/Amazon-or-Phone-Screen-or-Design-Restaurant-Reservation-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/423613/Amazon-or-Phone-Screen-or-Design-Restaurant-Reservation-System#]
+____
+
+[arabic, start=67]
+. {blank}
++
+____
+Food delivery app
+https://leetcode.com/discuss/interview-question/system-design/874074/Food-Delivery-App-or-Low-Level-Design-or-Interview-Question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/874074/Food-Delivery-App-or-Low-Level-Design-or-Interview-Question#]
+____
+. {blank}
++
+____
+Online gaming lobby service
+https://leetcode.com/discuss/interview-question/system-design/874074/Food-Delivery-App-or-Low-Level-Design-or-Interview-Question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/874074/Food-Delivery-App-or-Low-Level-Design-or-Interview-Question#]
+____
+. {blank}
++
+____
+URL fishing varifier
+https://leetcode.com/discuss/interview-question/system-design/896312/Google-system-design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/896312/Google-system-design#]
+____
+. {blank}
++
+____
+Design whatsapp/instagram story
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/388222/Snapchat-or-System-Design-or-Instagram-Story-Feature[[.underline]#https://leetcode.com/discuss/interview-question/system-design/388222/Snapchat-or-System-Design-or-Instagram-Story-Feature#]
+____
+
+[arabic, start=71]
+. {blank}
++
+____
+File sharing with collaborative editing
+https://leetcode.com/discuss/interview-question/system-design/838085/File-sharing-service-with-collaborative-editing-or-Amazon[[.underline]#https://leetcode.com/discuss/interview-question/system-design/838085/File-sharing-service-with-collaborative-editing-or-Amazon#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/824659/Intuit-or-Long-Poll-vs-Web-socket-vs-Server-send-Events[[.underline]#https://leetcode.com/discuss/interview-question/system-design/824659/Intuit-or-Long-Poll-vs-Web-socket-vs-Server-send-Events#]
+____
+
+[arabic, start=72]
+. {blank}
++
+____
+Stack overflow tags
+https://leetcode.com/discuss/interview-question/system-design/838025/Design-a-tagging-system-like-tags-used-in-stack-overflow[[.underline]#https://leetcode.com/discuss/interview-question/system-design/838025/Design-a-tagging-system-like-tags-used-in-stack-overflow#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/307558/Design-Stack-Overflow[[.underline]#https://leetcode.com/discuss/interview-question/system-design/307558/Design-Stack-Overflow#]
+____
+
+[arabic, start=73]
+. {blank}
++
+____
+Tinyurls
+https://leetcode.com/discuss/interview-question/system-design/838012/URL-Shortener-or-MD5-or-How-to-deal-with-collisions-or-FinTech-startup[[.underline]#https://leetcode.com/discuss/interview-question/system-design/838012/URL-Shortener-or-MD5-or-How-to-deal-with-collisions-or-FinTech-startup#]
+____
+. {blank}
++
+____
+Github like cloud repo
+https://leetcode.com/discuss/interview-question/system-design/837383/System-design-of-code-repository-like-github[[.underline]#https://leetcode.com/discuss/interview-question/system-design/837383/System-design-of-code-repository-like-github#]
+____
+. {blank}
++
+____
+Job posting site
+https://leetcode.com/discuss/interview-question/system-design/811840/Job-listing-storage-and-search[[.underline]#https://leetcode.com/discuss/interview-question/system-design/811840/Job-listing-storage-and-search#]
+____
+. {blank}
++
+____
+S3/cloud object store
+https://leetcode.com/discuss/interview-question/system-design/811503/System-design-Object-store-design-like-S3GCS[[.underline]#https://leetcode.com/discuss/interview-question/system-design/811503/System-design-Object-store-design-like-S3GCS#]
+____
+. {blank}
++
+____
+Celebrity timeline generation
+https://leetcode.com/discuss/interview-question/system-design/810561/Timeline-generation-for-celebrities-or-System-Design-or-Google[[.underline]#https://leetcode.com/discuss/interview-question/system-design/810561/Timeline-generation-for-celebrities-or-System-Design-or-Google#]
+____
+. {blank}
++
+____
+Kindle service
+____
+. {blank}
++
+____
+Bidding system
+https://leetcode.com/discuss/interview-question/system-design/792060/Bidding-System%3A-System-Design-Interview[[.underline]#https://leetcode.com/discuss/interview-question/system-design/792060/Bidding-System%3A-System-Design-Interview#]
+____
+. {blank}
++
+____
+Billing system - asked in fb interview
+____
+. {blank}
++
+____
+RPC system for client server comm
+https://leetcode.com/discuss/interview-question/system-design/790034/Client-Server-Communication%3A-System-Design-Interview[[.underline]#https://leetcode.com/discuss/interview-question/system-design/790034/Client-Server-Communication%3A-System-Design-Interview#]
+____
+. {blank}
++
+____
+Autonomous driving system
+https://leetcode.com/discuss/interview-question/system-design/789961/Design-a-cloud-based-simulationvisualization-platform-for-a-self-driving-cars-company[[.underline]#https://leetcode.com/discuss/interview-question/system-design/789961/Design-a-cloud-based-simulationvisualization-platform-for-a-self-driving-cars-company#]
+____
+. {blank}
++
+____
+Github code search
+https://leetcode.com/discuss/interview-question/system-design/789015/Github-%3A-Design-search-feature-in-Github-scale-code-repository[[.underline]#https://leetcode.com/discuss/interview-question/system-design/789015/Github-%3A-Design-search-feature-in-Github-scale-code-repository#]
+____
+. {blank}
++
+____
+Car showroom
+https://leetcode.com/discuss/interview-question/system-design/785960/Amazon-System-Design-Question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/785960/Amazon-System-Design-Question#]
+____
+. {blank}
++
+____
+Airport boarding gate security
+https://leetcode.com/discuss/interview-question/system-design/785960/Amazon-System-Design-Question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/785960/Amazon-System-Design-Question#]
+____
+. {blank}
++
+____
+Social graph
+https://leetcode.com/discuss/interview-question/system-design/782906/Design-a-social-graph[[.underline]#https://leetcode.com/discuss/interview-question/system-design/782906/Design-a-social-graph#]
+____
+. {blank}
++
+____
+Place of interest
+https://leetcode.com/discuss/interview-question/system-design/777945/Design-a-system-to-source-store-and-display-places-of-interest[[.underline]#https://leetcode.com/discuss/interview-question/system-design/777945/Design-a-system-to-source-store-and-display-places-of-interest#]
+____
+. {blank}
++
+____
+Tinder
+https://leetcode.com/discuss/interview-question/system-design/774870/Tinder-System-Design-or-Online-Dating-App-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/774870/Tinder-System-Design-or-Online-Dating-App-System-Design#]
+____
+. {blank}
++
+____
+Grocery store
+https://leetcode.com/discuss/interview-question/system-design/769578/Amazon-orSystem-Design-or-Amazon-Go-or-suggestion-on-solution-welcome[[.underline]#https://leetcode.com/discuss/interview-question/system-design/769578/Amazon-orSystem-Design-or-Amazon-Go-or-suggestion-on-solution-welcome#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/467655/Amazon-Onsite-or-System-Design-Pickup-Delivery-System-For-Groceries[[.underline]#https://leetcode.com/discuss/interview-question/system-design/467655/Amazon-Onsite-or-System-Design-Pickup-Delivery-System-For-Groceries#]
+____
+
+[arabic, start=90]
+. {blank}
++
+____
+Display ads
+https://leetcode.com/discuss/interview-question/system-design/761814/Design-number-of-ads-to-show-to-users-on-a-google-search[[.underline]#https://leetcode.com/discuss/interview-question/system-design/761814/Design-number-of-ads-to-show-to-users-on-a-google-search#]
+____
+. {blank}
++
+____
+Add badge to peoples spotify account
+https://leetcode.com/discuss/interview-question/system-design/748408/How-to-design-a-system-to-add-badges-to-people's-Spotify-account[[.underline]#https://leetcode.com/discuss/interview-question/system-design/748408/How-to-design-a-system-to-add-badges-to-people's-Spotify-account#]
+____
+. {blank}
++
+____
+Xml to json conversation
+https://leetcode.com/discuss/interview-question/system-design/743624/System-design-question%3A-Amazon-SDE2%3A-Large-xml-files-to-json-conversion[[.underline]#https://leetcode.com/discuss/interview-question/system-design/743624/System-design-question%3A-Amazon-SDE2%3A-Large-xml-files-to-json-conversion#]
+____
+. {blank}
++
+____
+Ocr web app
+https://leetcode.com/discuss/interview-question/system-design/741676/System-Design%3A-OCR-web-app[[.underline]#https://leetcode.com/discuss/interview-question/system-design/741676/System-Design%3A-OCR-web-app#]
+____
+. {blank}
++
+____
+High scale otp generation system
+https://leetcode.com/discuss/interview-question/system-design/728464/Microsoft-or-Onsite-or-Modify-an-OTP-generation-system-to-handle-more-requests[[.underline]#https://leetcode.com/discuss/interview-question/system-design/728464/Microsoft-or-Onsite-or-Modify-an-OTP-generation-system-to-handle-more-requests#]
+____
+. {blank}
++
+____
+Distributed counter
+https://leetcode.com/discuss/interview-question/system-design/685310/Microsoft-virtual-or-Design-distributed-counter[[.underline]#https://leetcode.com/discuss/interview-question/system-design/685310/Microsoft-virtual-or-Design-distributed-counter#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/277606/Design-a-performance-counter[[.underline]#https://leetcode.com/discuss/interview-question/system-design/277606/Design-a-performance-counter#]
+____
+
+[arabic, start=96]
+. {blank}
++
+____
+Scan for viruses in uploaded file
+https://leetcode.com/discuss/interview-question/system-design/659875/Design-a-system-where-client-can-upload-a-file-and-viruses-need-to-be-scanned[[.underline]#https://leetcode.com/discuss/interview-question/system-design/659875/Design-a-system-where-client-can-upload-a-file-and-viruses-need-to-be-scanned#]
+____
+. {blank}
++
+____
+Log processing at scale
+https://leetcode.com/discuss/interview-question/system-design/622704/Design-a-system-to-store-and-retrieve-logs-for-all-of-eBay[[.underline]#https://leetcode.com/discuss/interview-question/system-design/622704/Design-a-system-to-store-and-retrieve-logs-for-all-of-eBay#]
+____
+. {blank}
++
+____
+London travel card system
+https://leetcode.com/discuss/interview-question/system-design/617408/Marshall-Wace-or-Onsite-or-How-would-you-design-Oyster-(London-Travel-Card-system)tion[[.underline]#https://leetcode.com/discuss/interview-question/system-design/617408/Marshall-Wace-or-Onsite-or-How-would-you-design-Oyster-(London-Travel-Card-system)tion#]
+____
+. {blank}
++
+____
+Payment system for newyork MTA
+https://leetcode.com/discuss/interview-question/system-design/305388/Design-a-transportation-payment-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/305388/Design-a-transportation-payment-System#].
+____
+. {blank}
++
+____
+Ad click counter
+https://leetcode.com/discuss/interview-question/system-design/584458/Facebook-or-System-Design-or-Ad-Click-Counter[[.underline]#https://leetcode.com/discuss/interview-question/system-design/584458/Facebook-or-System-Design-or-Ad-Click-Counter#]
+____
+. {blank}
++
+____
+Design slack
+https://leetcode.com/discuss/interview-question/system-design/582975/Design-Slack[[.underline]#https://leetcode.com/discuss/interview-question/system-design/582975/Design-Slack#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/339849/System-Design-or-Slack[[.underline]#https://leetcode.com/discuss/interview-question/system-design/339849/System-Design-or-Slack#]
+____
+
+[arabic, start=102]
+. {blank}
++
+____
+Wikipedia
+https://leetcode.com/discuss/interview-question/system-design/574872/Wikipedia-or-DBsystem-design-thoughts[[.underline]#https://leetcode.com/discuss/interview-question/system-design/574872/Wikipedia-or-DBsystem-design-thoughts#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/174380/Uber-design-question-Design-Wikipeida[[.underline]#https://leetcode.com/discuss/interview-question/system-design/174380/Uber-design-question-Design-Wikipeida#]
+____
+
+[arabic, start=103]
+. {blank}
++
+____
+ML related system design
+https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day[[.underline]#https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day#]
+____
+. {blank}
++
+____
+Windows update
+https://leetcode.com/discuss/interview-question/system-design/560512/System-Design-Question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/560512/System-Design-Question#]
+____
+. {blank}
++
+____
+People also searched for
+https://leetcode.com/discuss/interview-question/system-design/559481/Amazon-or-System-design-or-SDE-2-India[[.underline]#https://leetcode.com/discuss/interview-question/system-design/559481/Amazon-or-System-design-or-SDE-2-India#]
+smiliar to linkedin's you may also know
+____
+. {blank}
++
+____
+Cashback processing system
+https://leetcode.com/discuss/interview-question/system-design/543041/Design-cashback-processing-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/543041/Design-cashback-processing-system#]
+____
+. {blank}
++
+____
+Pub sub arch
+____
+. {blank}
++
+____
+Google or amazob book preview
+https://leetcode.com/discuss/interview-question/system-design/538295/Design-Google-Books-preview-Amazon-Books-look-inside[[.underline]#https://leetcode.com/discuss/interview-question/system-design/538295/Design-Google-Books-preview-Amazon-Books-look-inside#]
+____
+. {blank}
++
+____
+Design copy right detection
+https://leetcode.com/discuss/interview-question/system-design/530031/FAANG-Interview-Question-Design-a-copyright-detection-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/530031/FAANG-Interview-Question-Design-a-copyright-detection-system#]
+____
+. {blank}
++
+____
+Reddit
+https://leetcode.com/discuss/interview-question/system-design/469900/Netflix-or-System-Design-Web-App-Like-Reddit[[.underline]#https://leetcode.com/discuss/interview-question/system-design/469900/Netflix-or-System-Design-Web-App-Like-Reddit#]
+____
+. {blank}
++
+____
+Facebook nearby friends
+https://leetcode.com/discuss/interview-question/system-design/430926/Design-Nearby-Friends[[.underline]#https://leetcode.com/discuss/interview-question/system-design/430926/Design-Nearby-Friends#]
+____
+. {blank}
++
+____
+Google photos home page
+https://leetcode.com/discuss/interview-question/system-design/398523/System-Design-Google-photos-homepage[[.underline]#https://leetcode.com/discuss/interview-question/system-design/398523/System-Design-Google-photos-homepage#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/396949/System-Design-Google-Photos[[.underline]#https://leetcode.com/discuss/interview-question/system-design/396949/System-Design-Google-Photos#]
+____
+
+[arabic, start=113]
+. {blank}
++
+____
+Image upload system
+https://leetcode.com/discuss/interview-question/system-design/391183/Ebay-System-Design-Question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/391183/Ebay-System-Design-Question#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/390503/Google-or-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/390503/Google-or-System-Design#]
+____
+
+[arabic, start=114]
+. {blank}
++
+____
+Facebook translator service
+https://leetcode.com/discuss/interview-question/system-design/386322/Design-a-translator-service-for-facebook[[.underline]#https://leetcode.com/discuss/interview-question/system-design/386322/Design-a-translator-service-for-facebook#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/318811/Google-or-System-design-or-Design-a-translation-service-like-Google-Translate[[.underline]#https://leetcode.com/discuss/interview-question/system-design/318811/Google-or-System-design-or-Design-a-translation-service-like-Google-Translate#]
+____
+
+[arabic, start=115]
+. {blank}
++
+____
+System for health care data
+https://leetcode.com/discuss/interview-question/system-design/368245/Design-Service-to-Interface-with-Healthcare-Data[[.underline]#https://leetcode.com/discuss/interview-question/system-design/368245/Design-Service-to-Interface-with-Healthcare-Data#]
+____
+. {blank}
++
+____
+Health score app
+https://leetcode.com/discuss/interview-question/system-design/366754/Amazon-or-System-Design-for-health-score-app[[.underline]#https://leetcode.com/discuss/interview-question/system-design/366754/Amazon-or-System-Design-for-health-score-app#]
+____
+. {blank}
++
+____
+Railway reservation system
+https://leetcode.com/discuss/interview-question/system-design/364965/Railway-Reservation-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/364965/Railway-Reservation-System#]
+____
+. {blank}
++
+____
+Treadmill system
+https://leetcode.com/discuss/interview-question/system-design/362168/Google-or-Onsite-or-Tread-Mill-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/362168/Google-or-Onsite-or-Tread-Mill-System-Design#]
+____
+. {blank}
++
+____
+Addressed of entire planet
+https://leetcode.com/discuss/interview-question/system-design/341980/Amazon-or-System-Design-or-System-to-capture-unique-addresses-in-the-entire-world[[.underline]#https://leetcode.com/discuss/interview-question/system-design/341980/Amazon-or-System-Design-or-System-to-capture-unique-addresses-in-the-entire-world#]
+____
+. {blank}
++
+____
+Gofundme
+https://leetcode.com/discuss/interview-question/system-design/336089/System-Design-or-GoFundMe[[.underline]#https://leetcode.com/discuss/interview-question/system-design/336089/System-Design-or-GoFundMe#]
+____
+. {blank}
++
+____
+Shipping fullfilment
+https://leetcode.com/discuss/interview-question/system-design/320719/Design%3A-Scalable-Shipping-Fulfillment-Center[[.underline]#https://leetcode.com/discuss/interview-question/system-design/320719/Design%3A-Scalable-Shipping-Fulfillment-Center#]
+____
+. {blank}
++
+____
+Flight search API
+https://leetcode.com/discuss/interview-question/system-design/309853/JSON-structure-for-Flight-search-API[[.underline]#https://leetcode.com/discuss/interview-question/system-design/309853/JSON-structure-for-Flight-search-API#]
+____
+. {blank}
++
+____
+Splitwise
+https://leetcode.com/discuss/interview-question/system-design/306519/System-Design-or-Splitwise[[.underline]#https://leetcode.com/discuss/interview-question/system-design/306519/System-Design-or-Splitwise#]
+____
+. {blank}
++
+____
+Google calendar
+https://leetcode.com/discuss/interview-question/system-design/305654/System-Design-or-Google-Calendar[[.underline]#https://leetcode.com/discuss/interview-question/system-design/305654/System-Design-or-Google-Calendar#]
+____
+. {blank}
++
+____
+Fb popular/trending pages
+https://leetcode.com/discuss/interview-question/system-design/305505/Design-a-most-populartrending-profiles-page[[.underline]#https://leetcode.com/discuss/interview-question/system-design/305505/Design-a-most-populartrending-profiles-page#]
+____
+. {blank}
++
+____
+Courier service
+https://leetcode.com/discuss/interview-question/system-design/301423/Design-a-UPS-style-mail-delivery-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/301423/Design-a-UPS-style-mail-delivery-system#]
+____
+. {blank}
++
+____
+Hr portal
+https://leetcode.com/discuss/interview-question/system-design/289092/Design-an-HR-web-portal-for-Amazon's-recruiting-team[[.underline]#https://leetcode.com/discuss/interview-question/system-design/289092/Design-an-HR-web-portal-for-Amazon's-recruiting-team#]
+____
+. {blank}
++
+____
+Outlook recurring meeting
+https://leetcode.com/discuss/interview-question/system-design/286891/Design-Outlook-recurring-meeting-system-with-variable-input[[.underline]#https://leetcode.com/discuss/interview-question/system-design/286891/Design-Outlook-recurring-meeting-system-with-variable-input#]
+____
+. {blank}
++
+____
+Communication system for ecom sites
+https://leetcode.com/discuss/interview-question/system-design/286457/Design-a-communication-platform[[.underline]#https://leetcode.com/discuss/interview-question/system-design/286457/Design-a-communication-platform#].
+____
+. {blank}
++
+____
+Imdb
+https://leetcode.com/discuss/interview-question/system-design/270416/Design-a-movies-reviews-aggregator-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/270416/Design-a-movies-reviews-aggregator-system#]
+____
+. {blank}
++
+____
+Realtime event aggregator
+https://leetcode.com/discuss/interview-question/system-design/270412/Design-a-Real-Time-Event-Aggregation-System[[.underline]#https://leetcode.com/discuss/interview-question/system-design/270412/Design-a-Real-Time-Event-Aggregation-System#]
+____
+. {blank}
++
+____
+Gpay
+https://leetcode.com/discuss/interview-question/system-design/270406/Design-a-Payment-System-like-Google-Pay[[.underline]#https://leetcode.com/discuss/interview-question/system-design/270406/Design-a-Payment-System-like-Google-Pay#]
+____
+. {blank}
++
+____
+Top shared post
+https://leetcode.com/discuss/interview-question/system-design/258398/Design-top-shared-post-system-in-5mins1-hour1-day1-week[[.underline]#https://leetcode.com/discuss/interview-question/system-design/258398/Design-top-shared-post-system-in-5mins1-hour1-day1-week#]
+____
+. {blank}
++
+____
+Market place analytics
+https://leetcode.com/discuss/interview-question/system-design/227797/System-Design-E-Commerce-Marketplace-analytics[[.underline]#https://leetcode.com/discuss/interview-question/system-design/227797/System-Design-E-Commerce-Marketplace-analytics#]
+____
+. {blank}
++
+____
+Top 10 most liked articles
+https://leetcode.com/discuss/interview-question/system-design/225609/Design-system-which-will-show-top-10-most-liked-articles-within-1524-hours[[.underline]#https://leetcode.com/discuss/interview-question/system-design/225609/Design-system-which-will-show-top-10-most-liked-articles-within-1524-hours#].
+____
+. {blank}
++
+____
+Auth for multi tenant
+https://leetcode.com/discuss/interview-question/system-design/225331/Design-authentication-system-to-multi-tenant-environment[[.underline]#https://leetcode.com/discuss/interview-question/system-design/225331/Design-authentication-system-to-multi-tenant-environment#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/202958/Multi-Tenant-Saas-Architecture[[.underline]#https://leetcode.com/discuss/interview-question/system-design/202958/Multi-Tenant-Saas-Architecture#]
+____
+
+[arabic, start=137]
+. {blank}
++
+____
+Design Changefeed
+https://leetcode.com/discuss/interview-question/system-design/208888/Design-a-system-to-keep-track-of-changes-in-an-SQL-database[[.underline]#https://leetcode.com/discuss/interview-question/system-design/208888/Design-a-system-to-keep-track-of-changes-in-an-SQL-database#]
+____
+. {blank}
++
+____
+Track runners in marathon
+https://leetcode.com/discuss/interview-question/system-design/200342/Bloomberg%3A-Implement-a-system-to-track-runners-in-a-marathon[[.underline]#https://leetcode.com/discuss/interview-question/system-design/200342/Bloomberg%3A-Implement-a-system-to-track-runners-in-a-marathon#]
+____
+. {blank}
++
+____
+Hotel booking page this many people visiting
+https://leetcode.com/discuss/interview-question/system-design/163204/Design-%22How-Many-people-currently-viewing-the-property%22-for-a-E-Commerce-Hotel-Booking-Site[[.underline]#https://leetcode.com/discuss/interview-question/system-design/163204/Design-%22How-Many-people-currently-viewing-the-property%22-for-a-E-Commerce-Hotel-Booking-Site#]
+____
+. {blank}
++
+____
+Text line editor
+https://leetcode.com/discuss/interview-question/system-design/124679/Implement-a-Text-Line-Editor[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124679/Implement-a-Text-Line-Editor#]
+____
+. {blank}
++
+____
+Location sharing service
+https://leetcode.com/discuss/interview-question/system-design/124673/Design-a-Location-Sharing-Android-Application[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124673/Design-a-Location-Sharing-Android-Application#]
+____
+. {blank}
++
+____
+Build system
+https://leetcode.com/discuss/interview-question/system-design/124807/Design-a-build-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124807/Design-a-build-system#]
+____
+. {blank}
++
+____
+Hourly backup from mobile phone
+https://leetcode.com/discuss/interview-question/system-design/124792/Design-a-system-that-can-handle-hourly-backups-for-mobile-phones[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124792/Design-a-system-that-can-handle-hourly-backups-for-mobile-phones#]
+____
+. {blank}
++
+____
+Google help system
+https://leetcode.com/discuss/interview-question/system-design/125191/Design-the-Google-help-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/125191/Design-the-Google-help-system#]
+____
+
+____
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+____
+
+ 
+
+ 
+
+*Other interesting post about specific component design*
+
+[arabic]
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/136140/Write-a-class-which-is-hard-to-test[[.underline]#https://leetcode.com/discuss/interview-question/system-design/136140/Write-a-class-which-is-hard-to-test#]
+____
+. {blank}
++
+____
+Interesting variation of ecart problem where first one who click buys
+will buy
+https://leetcode.com/discuss/interview-question/system-design/498895/Startup-interview-or-Designing-tricky-e-shop[[.underline]#https://leetcode.com/discuss/interview-question/system-design/498895/Startup-interview-or-Designing-tricky-e-shop#]
+____
+. {blank}
++
+____
+Back of envelope calculation
+https://leetcode.com/discuss/interview-question/system-design/357656/Experience-with-back-of-the-envelope-calculations[[.underline]#https://leetcode.com/discuss/interview-question/system-design/357656/Experience-with-back-of-the-envelope-calculations#]
+____
+. {blank}
++
+____
+Drawing tool
+https://leetcode.com/discuss/interview-question/system-design/1148896/System-Design-Drawing-Tool-Recos[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1148896/System-Design-Drawing-Tool-Recos#]
+____
+. {blank}
++
+____
+Very good list
+https://leetcode.com/discuss/general-discussion/670355/Experienced-Interview-Preparation-Guide-All-Resources[[.underline]#https://leetcode.com/discuss/general-discussion/670355/Experienced-Interview-Preparation-Guide-All-Resources#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/1002218/Facebook-or-Google-or-Top-System-Design-Interview-Questions-(Part-1)[[.underline]#https://leetcode.com/discuss/interview-question/1002218/Facebook-or-Google-or-Top-System-Design-Interview-Questions-(Part-1)#]
+____
+. {blank}
++
+____
+https://github.com/donnemartin/system-design-primer[[.underline]#https://github.com/donnemartin/system-design-primer#]
+____
+. {blank}
++
+____
+https://github.com/binhnguyennus/awesome-scalability[[.underline]#https://github.com/binhnguyennus/awesome-scalability#]
+____
+. {blank}
++
+____
+Json parser
+https://leetcode.com/discuss/interview-question/system-design/1052608/Design-a-JSON-Parser-or-SDE2[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1052608/Design-a-JSON-Parser-or-SDE2#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/1043657/MakeMyTrip-Backend-Developer-or-System-DesignMultithreading[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1043657/MakeMyTrip-Backend-Developer-or-System-DesignMultithreading#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/1042229/Facebook-or-Google-or-Top-System-Design-Interview-Questions-(Part-2)[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1042229/Facebook-or-Google-or-Top-System-Design-Interview-Questions-(Part-2)#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/1038585/How-do-you-scale-up-an-Application-to-serve-thousands-of-request-per-second[[.underline]#https://leetcode.com/discuss/interview-question/system-design/1038585/How-do-you-scale-up-an-Application-to-serve-thousands-of-request-per-second#]
+____
+. {blank}
++
+____
+User data access policy design
+https://leetcode.com/discuss/interview-question/system-design/895268/Google-or-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/895268/Google-or-System-Design#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/829466/Amazon-or-Phone-or-Seattle-or-Column-Store-vs-Row-Store[[.underline]#https://leetcode.com/discuss/interview-question/system-design/829466/Amazon-or-Phone-or-Seattle-or-Column-Store-vs-Row-Store#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/808216/Phone-book-and-search[[.underline]#https://leetcode.com/discuss/interview-question/system-design/808216/Phone-book-and-search#]
+- suffix tree
+____
+. {blank}
++
+____
+https://hackernoon.com/scaling-websockets-9a31497af051[[.underline]#https://hackernoon.com/scaling-websockets-9a31497af051#]
+____
+. {blank}
++
+____
+Online whiteboard drawing like draw.io
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/799474/Virtual-onsite-at-DocuSign[[.underline]#https://leetcode.com/discuss/interview-question/system-design/799474/Virtual-onsite-at-DocuSign#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/795890/How-many-transactions-does-Oracle-DB-handle-Read-and-write[[.underline]#https://leetcode.com/discuss/interview-question/system-design/795890/How-many-transactions-does-Oracle-DB-handle-Read-and-write#]
+____
+. {blank}
++
+____
+How to store Recently viewed item
+https://leetcode.com/discuss/interview-question/system-design/775139/Amazon-System-Design-customer's-recently-viewed-items[[.underline]#https://leetcode.com/discuss/interview-question/system-design/775139/Amazon-System-Design-customer's-recently-viewed-items#]
+____
+. {blank}
++
+____
+Depth an interviewer can go
+https://leetcode.com/discuss/interview-question/system-design/773980/Watch-this-before-System-Design-Interview-the-details-an-interviewer-can-go-to-evaluate-candidate[[.underline]#https://leetcode.com/discuss/interview-question/system-design/773980/Watch-this-before-System-Design-Interview-the-details-an-interviewer-can-go-to-evaluate-candidate#]
+____
+. {blank}
++
+____
+Privacy api
+https://leetcode.com/discuss/interview-question/system-design/727474/System-design-critique-request-for-below-question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/727474/System-design-critique-request-for-below-question#]
+____
+. {blank}
++
+____
+LLD
+https://leetcode.com/discuss/interview-question/system-design/692383/Google-or-Onsite-or-Design-a-organization-pharmacy-shop-with-managers[[.underline]#https://leetcode.com/discuss/interview-question/system-design/692383/Google-or-Onsite-or-Design-a-organization-pharmacy-shop-with-managers#]
+____
+. {blank}
++
+____
+T9 predicitve system
+https://leetcode.com/discuss/interview-question/system-design/685338/Microsoft-or-Onsite-or-Design-the-T9-predictive-text-algorithm-and-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/685338/Microsoft-or-Onsite-or-Design-the-T9-predictive-text-algorithm-and-system#]
+____
+. {blank}
++
+____
+Storsge of millions of subscriber
+https://leetcode.com/discuss/interview-question/system-design/680047/How-will-you-store-millions-of-subscribers-list-(assume-it-as-email-id)[[.underline]#https://leetcode.com/discuss/interview-question/system-design/680047/How-will-you-store-millions-of-subscribers-list-(assume-it-as-email-id)#]
+____
+. {blank}
++
+____
+Flipkart warehouse portal
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/663037/Amazon-SystemDesign-Flipkart-Suggestions-Design-Warehouse-Portal[[.underline]#https://leetcode.com/discuss/interview-question/system-design/663037/Amazon-SystemDesign-Flipkart-Suggestions-Design-Warehouse-Portal#]
+____
+
+[arabic, start=27]
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/632537/Design-an-algorithm-to-efficiently-transfer-required-bytes-of-data-to-a-single-PC-on-the-network[[.underline]#https://leetcode.com/discuss/interview-question/system-design/632537/Design-an-algorithm-to-efficiently-transfer-required-bytes-of-data-to-a-single-PC-on-the-network#].
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/581804/Facebook-System-Design-Preparation[[.underline]#https://leetcode.com/discuss/interview-question/system-design/581804/Facebook-System-Design-Preparation#]
+- different type of design interviews at facebook
+____
+. {blank}
++
+____
+Count current active user on the page,
+https://leetcode.com/discuss/interview-question/system-design/557603/Postman-or-OA-or-System-Design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/557603/Postman-or-OA-or-System-Design#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/532889/Design-a-counter-for-a-website-which-tells-how-many-visits-happened-to-that-website[[.underline]#https://leetcode.com/discuss/interview-question/system-design/532889/Design-a-counter-for-a-website-which-tells-how-many-visits-happened-to-that-website#]
+____
+
+[arabic, start=30]
+. {blank}
++
+____
+Csv parsing at scale
+https://leetcode.com/discuss/interview-question/system-design/545664/CSV-parsing-at-scale[[.underline]#https://leetcode.com/discuss/interview-question/system-design/545664/CSV-parsing-at-scale#]
+____
+. {blank}
++
+____
+API to get best selling book
+https://leetcode.com/discuss/interview-question/system-design/535162/Design-read-api-to-get-best-selling-books[[.underline]#https://leetcode.com/discuss/interview-question/system-design/535162/Design-read-api-to-get-best-selling-books#]
+____
+. {blank}
++
+____
+Fb mutual friend
+https://leetcode.com/discuss/interview-question/system-design/533810/FB-API-System-design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/533810/FB-API-System-design#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/532089/Update-System-design-of-Amazon-to-handle-10x-times-more-traffic-than-what-it-currently-receives[[.underline]#https://leetcode.com/discuss/interview-question/system-design/532089/Update-System-design-of-Amazon-to-handle-10x-times-more-traffic-than-what-it-currently-receives#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/513374/FAANG-system-design-interview-question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/513374/FAANG-system-design-interview-question#]
+____
+. {blank}
++
+____
+Sql scalability
+https://leetcode.com/discuss/interview-question/system-design/507833/SQL-Scalability[[.underline]#https://leetcode.com/discuss/interview-question/system-design/507833/SQL-Scalability#]
+____
+. {blank}
++
+____
+Backup from dc1 to dc2
+https://leetcode.com/discuss/interview-question/system-design/502522/System-design-to-backup-datacenter1-to-datacenter-2[[.underline]#https://leetcode.com/discuss/interview-question/system-design/502522/System-design-to-backup-datacenter1-to-datacenter-2#]
+____
+. {blank}
++
+____
+Order within next 1 hour to get early delivery feature
+https://leetcode.com/discuss/interview-question/system-design/499558/Amazon-System-Design-Question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/499558/Amazon-System-Design-Question#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/484956/design-airport-luggage-handling-system[[.underline]#https://leetcode.com/discuss/interview-question/484956/design-airport-luggage-handling-system#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/483959/Google-onsite-(Theoretical-System-Design)[[.underline]#https://leetcode.com/discuss/interview-question/system-design/483959/Google-onsite-(Theoretical-System-Design)#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/421969/Twitch-or-System-Design-Onsite-or-Design-Twitch-Analytics-Use-Case[[.underline]#https://leetcode.com/discuss/interview-question/system-design/421969/Twitch-or-System-Design-Onsite-or-Design-Twitch-Analytics-Use-Case#]
+____
+. {blank}
++
+____
+Good discussion on designing SAAS
+https://leetcode.com/discuss/interview-question/system-design/385363/Design-Task-Executor-as-Saas[[.underline]#https://leetcode.com/discuss/interview-question/system-design/385363/Design-Task-Executor-as-Saas#]
+____
+. {blank}
++
+____
+Track down bad request
+https://leetcode.com/discuss/interview-question/system-design/313117/Design-a-system-capable-of-tracking-bad-request-down-quickly[[.underline]#https://leetcode.com/discuss/interview-question/system-design/313117/Design-a-system-capable-of-tracking-bad-request-down-quickly#]
+____
+. {blank}
++
+____
+Facebook
+https://leetcode.com/discuss/interview-question/system-design/311825/Facebook-System-design[[.underline]#https://leetcode.com/discuss/interview-question/system-design/311825/Facebook-System-design#]
+____
+. {blank}
++
+____
+Flight landing with onerunway
+https://leetcode.com/discuss/interview-question/system-design/303745/Handling-flight-landing-requests-with-one-runway[[.underline]#https://leetcode.com/discuss/interview-question/system-design/303745/Handling-flight-landing-requests-with-one-runway#]
+____
+. {blank}
++
+____
+Good read on data modelling
+https://leetcode.com/discuss/interview-question/system-design/295671/Amazon-or-Data-Engineer-Role-or-Database-Design-Question[[.underline]#https://leetcode.com/discuss/interview-question/system-design/295671/Amazon-or-Data-Engineer-Role-or-Database-Design-Question#]
+____
+. {blank}
++
+____
+Traffic light controller
+https://leetcode.com/discuss/interview-question/system-design/291233/Design-a-traffic-light-controller[[.underline]#https://leetcode.com/discuss/interview-question/system-design/291233/Design-a-traffic-light-controller#]
+____
+. {blank}
++
+____
+Live streaming view count
+https://leetcode.com/discuss/interview-question/system-design/284232/Livestreaming-view-count[[.underline]#https://leetcode.com/discuss/interview-question/system-design/284232/Livestreaming-view-count#].
+____
+. {blank}
++
+____
+Random number generator for a slot mschine
+https://leetcode.com/discuss/interview-question/system-design/281762/Microsoft-or-Design-a-random-number-generator-for-a-slot-machine[[.underline]#https://leetcode.com/discuss/interview-question/system-design/281762/Microsoft-or-Design-a-random-number-generator-for-a-slot-machine#]
+____
+. {blank}
++
+____
+Company badge system
+https://leetcode.com/discuss/interview-question/system-design/279371/Design-a-badge-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/279371/Design-a-badge-system#]
+____
+. {blank}
++
+____
+API gateway with graphql
+https://leetcode.com/discuss/interview-question/system-design/255282/Design-API-gateway[[.underline]#https://leetcode.com/discuss/interview-question/system-design/255282/Design-API-gateway#]
+____
+. {blank}
++
+____
+Good read on scaling
+https://leetcode.com/discuss/interview-question/system-design/250803/Large-amount-of-query-request-in-seconds[[.underline]#https://leetcode.com/discuss/interview-question/system-design/250803/Large-amount-of-query-request-in-seconds#].
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/249988/How-to-Transfer-1-GB-of-data-from-one-microservice-to-another[[.underline]#https://leetcode.com/discuss/interview-question/system-design/249988/How-to-Transfer-1-GB-of-data-from-one-microservice-to-another#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/234311/Celebrity-Twitter-hack[[.underline]#https://leetcode.com/discuss/interview-question/system-design/234311/Celebrity-Twitter-hack#]
+____
+. {blank}
++
+____
+Amazon locker
+https://leetcode.com/discuss/interview-question/system-design/233869/Design-Amazon-Locker-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/233869/Design-Amazon-Locker-system#]
+____
+. {blank}
++
+____
+Upload large file
+https://leetcode.com/discuss/interview-question/system-design/224398/Algorithm-for-upload-large-file[[.underline]#https://leetcode.com/discuss/interview-question/system-design/224398/Algorithm-for-upload-large-file#]
+____
+. {blank}
++
+____
+Currency civersation
+https://leetcode.com/discuss/interview-question/system-design/216912/Design-an-app-that-converts-USD-to-another-country-currency[[.underline]#https://leetcode.com/discuss/interview-question/system-design/216912/Design-an-app-that-converts-USD-to-another-country-currency#].
+____
+. {blank}
++
+____
+Geohash
+https://leetcode.com/discuss/interview-question/system-design/203364/How-to-retrieve-addresses-based-on-Latitude-and-Longitude[[.underline]#https://leetcode.com/discuss/interview-question/system-design/203364/How-to-retrieve-addresses-based-on-Latitude-and-Longitude#]
+____
+
+____
+https://leetcode.com/discuss/interview-question/system-design/124568/How-to-design-a-system-to-retrieve-address-information-longitude-and-latitude-information[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124568/How-to-design-a-system-to-retrieve-address-information-longitude-and-latitude-information#].
+____
+
+[arabic, start=58]
+. {blank}
++
+____
+Strategy to update sattelite firmware
+https://leetcode.com/discuss/interview-question/system-design/198761/Updating-Satellite-Frimware[[.underline]#https://leetcode.com/discuss/interview-question/system-design/198761/Updating-Satellite-Frimware#]
+____
+. {blank}
++
+____
+Design card deck
+https://leetcode.com/discuss/interview-question/system-design/194663/Design-a-class-that-represents-a-deck-of-cards[[.underline]#https://leetcode.com/discuss/interview-question/system-design/194663/Design-a-class-that-represents-a-deck-of-cards#]
+____
+. {blank}
++
+____
+Send large files
+https://leetcode.com/discuss/interview-question/system-design/193953/Distribute-binary-file-(daily)-for-thousands-of-servers[[.underline]#https://leetcode.com/discuss/interview-question/system-design/193953/Distribute-binary-file-(daily)-for-thousands-of-servers#]
+____
+. {blank}
++
+____
+Extract json from a text file
+https://leetcode.com/discuss/interview-question/system-design/191944/How-to-extract-JSON-object-from-a-text-file-of-size-100-GB[[.underline]#https://leetcode.com/discuss/interview-question/system-design/191944/How-to-extract-JSON-object-from-a-text-file-of-size-100-GB#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/177823/How-to-track-overall-activity-time-of-every-user-efficiently[[.underline]#https://leetcode.com/discuss/interview-question/system-design/177823/How-to-track-overall-activity-time-of-every-user-efficiently#]
+____
+. {blank}
++
+____
+Design video pause functionality
+https://leetcode.com/discuss/interview-question/system-design/177327/Video-pause-functionality-for-multiple-devices[[.underline]#https://leetcode.com/discuss/interview-question/system-design/177327/Video-pause-functionality-for-multiple-devices#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/172809/Sync-front-end-with-back-end-in-realtime[[.underline]#https://leetcode.com/discuss/interview-question/system-design/172809/Sync-front-end-with-back-end-in-realtime#]
+____
+. {blank}
++
+____
+Push/pull API for producer consumer
+https://leetcode.com/discuss/interview-question/system-design/158701/Design-push-and-pull-APIs-for-a-producer-consumer-system[[.underline]#https://leetcode.com/discuss/interview-question/system-design/158701/Design-push-and-pull-APIs-for-a-producer-consumer-system#]
+____
+. {blank}
++
+____
+HA for webproxy
+https://leetcode.com/discuss/interview-question/system-design/134797/HA-for-HTTP-proxy[[.underline]#https://leetcode.com/discuss/interview-question/system-design/134797/HA-for-HTTP-proxy#]
+____
+. {blank}
++
+____
+Alarm app
+https://leetcode.com/discuss/interview-question/system-design/133426/Microsoft-Mobile-app-for-alarm[[.underline]#https://leetcode.com/discuss/interview-question/system-design/133426/Microsoft-Mobile-app-for-alarm#]
+____
+. {blank}
++
+____
+Snake and ladder
+https://leetcode.com/discuss/interview-question/system-design/132140/Design-online-multiplayer-snakeandladder-game[[.underline]#https://leetcode.com/discuss/interview-question/system-design/132140/Design-online-multiplayer-snakeandladder-game#]
+____
+. {blank}
++
+____
+https://leetcode.com/discuss/interview-question/system-design/124858/First-non-repeating-word-in-a-file-File-size-can-be-100GB[[.underline]#https://leetcode.com/discuss/interview-question/system-design/124858/First-non-repeating-word-in-a-file-File-size-can-be-100GB#].
+____
+. {blank}
++
+____
+Store extremely large parse matrix
+https://leetcode.com/discuss/interview-question/system-design/125306/How-to-store-extremely-large-sparse-matrices[[.underline]#https://leetcode.com/discuss/interview-question/system-design/125306/How-to-store-extremely-large-sparse-matrices#]
+____
+. {blank}
++
+____
+Implement mine swipper
+____
+
+ 
+
+____
+ 
+
+ 
+____
+
+OOP design
+https://github.com/tssovi/grokking-the-object-oriented-design-interview[[.underline]#https://github.com/tssovi/grokking-the-object-oriented-design-interview#]
+
+https://github.com/savitansh/SystemDesignInterview[[.underline]#https://github.com/savitansh/SystemDesignInterview#]
+
+____
+ 
+
+ 
+____
+
+https://leetcode.com/discuss/interview-question/system-design/943886/Facebook-Product-Design-Questions[[.underline]#https://leetcode.com/discuss/interview-question/system-design/943886/Facebook-Product-Design-Questions#]
+
+ 
+
+https://github.com/checkcheckzz/system-design-interview[[.underline]#https://github.com/checkcheckzz/system-design-interview#]
+
+https://github.com/donnemartin/system-design-primer[[.underline]#GitHub
+- donnemartin/system-design-primer: Learn how to design large-scale
+systems. Prep for the system design interview. Includes Anki
+flashcards.#]
+
+ 
+
+ 
+
+ 
+
+Drawing tool +
+https://leetcode.com/discuss/interview-question/system-design/758105/Remote-system-design-diagram-drawing-tool[[.underline]#https://leetcode.com/discuss/interview-question/system-design/758105/Remote-system-design-diagram-drawing-tool#]
+
+ 
+
+Other informstive posts
+
+ 
+
+I hope it will be helpful if you have mentioned your overall experience.
+
+If you are looking for interview perspective, You need to gain knowledge
+about distributed systems.
+
+To start with, to simplify it,
+
+For a Simple Application
+
+Input --> Processing --> DataStore --> Processing/Output
+
+For Distributed Systems [I wrote considering for System Design
+interview]
+
+Following contains quick overlook about the list that need to have for
+basic understanding.
+
+[arabic]
+. {blank}
++
+____
+Input/Output +
+Communication[Rest, grpc, WebSocket, tcp/udp, webRTC], API Gateway,
+Proxy Server, Load Balancing -- [Reverse Proxy] +
+Message Queue -- [Queue for sending/receiving information] Kafka/RabitMQ
+____
+. {blank}
++
+____
+Processing +
+Computation -- Micro-service [Python, Springboot/Java, Go...],
+MapReduce +
+Service Discovery/Registry -- [Finding and Redirecting the load, Saga
+Pattern] -- Eg: Eureka
+____
+. {blank}
++
+____
+Datastore/Distributed Consensus +
+Cache -- [Simple Cache to reduce database hits] -- Eg: Redis +
+SQL -- [SQL database for Relational Data -- Transactions based like
+payments, Horizontal Partition/Vertical Partition, Shading ] Eg: MySQL +
+NOSQL -- [NOSQL for querying documents like product, product details,
+CAP] Eg: MongoDB/Apache Cassandra +
+Concurrency -- 2 Phase Commit, 3 Phase Commit, Saga Pattern[Choreography
+saga, Orchestrator Saga], Split Brain problem. +
+FileSystem -- Hadoop File System
+____
+. {blank}
++
+____
+Security +
+AAA -- Authentication, Authorisation, Auditing
+____
+
+Misc -- Logging/Notification
+
+Once you have overall picture in your mind, you can start with YouTube
+videos like Gaurav Sen or Tech Dummies.
+
+ 
+
+ 
+
+ 
+
+ 
+
+*Product Design*
+
+The product design interview at Facebook will involve designing a
+product or API to support an end-user experience. Here's a list of
+concepts that Facebook recommends you review before your interview:
+
+-Scalability
+
+-Design patterns
+
+-Data ownership
+
+-Protocols
+
+-Data formats
+
+-Client-server design
+
+-Designing for long term vs. complexity
+
+-Accommodating possible product changes
+
+Some example questions involve designing a product API or an email
+server.
+
+ 
+
+ 
+
+*System Design*
+
+The system design interview at Facebook will ask you to weigh design
+considerations for complex problems. Here's a list of concepts that
+Facebook recommends you review before your interview:
+
+-Concurrency (threads, deadlock, starvation, consistency, coherence)
+
+-Caching
+
+-Database partitioning, replication, sharding, CAP Theorem
+
+-Networking (IPC, TCP/IP)
+
+Real-world performance (relative performance RAM, disk, your network,
+SSD)
+
+-Availability and reliability (types of failures, failure units, how
+failures may manifest, mitigations, etc.)
+
+-Data storage and data aggregation
+
+-QPS capacity/machine estimation (back of the envelope estimates), byte
+size estimation
+
+Some example questions involve architecting a video distribution system
+or designing a mobile image search client.
+
+ 
