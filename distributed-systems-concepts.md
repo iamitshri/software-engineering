@@ -61,7 +61,7 @@
   - Consistency ( C ): All nodes see the same data at the same time. It is equivalent to having a single up-to-date copy of the data.
   - Availability ( A ): Every request received by a non-failing node in the system must result in a response. Even when severe network failures occur, every request must terminate.
   - Partition tolerance ( P ): A partition-tolerant system continues to operate despite partial system failure or arbitrary message loss. Such a system can sustain any network failure that does not result in a failure of the entire network. Data is sufficiently replicated across combinations of nodes and networks to keep the system up through intermittent outages.
-##  PACELEC Theorem
+##  PACELC Theorem
 - We cannot avoid partition in a distributed system, therefore, according to the CAP theorem, a distributed system should choose between consistency or availability.
 - One place where the CAP theorem is silent is what happens when there is no network partition? What choices does a distributed system have when there is no partition
 - The PACELC theorem states that in a system that replicates data:
