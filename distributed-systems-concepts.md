@@ -70,12 +70,14 @@
 ##  Hinted Handoff
 - If we have replication factor of 3 nodes and the client is writing with quorum consistency level. This means that even if one node is down client can still write to remaining two nodes to fulfill consistency level.
 - For nodes that are down, the coordinator node keep notes (or hints) of all the write requests they have missed. Once the failing nodes recover, the write requests are forwarded to them based on the hints stored.
+- https://www.influxdata.com/blog/eventual-consistency-hhq/
 ##  Read Repair
 - In Distributed Systems, where data is replicated across multiple nodes, some nodes can end up having stale data
 - The read repair operation pushes the latest version of data to nodes with the older version.
 - Cassandra and Dynamo use ‘Read Repair’ to push the latest version of the data to nodes with the older versions.
 ## Anti-entropy
 - Anti-entropy is a process of comparing the data of all replicas and updating each replica to the newest version
+- https://www.influxdata.com/blog/eventual-consistency-anti-entropy/
 ##  Merkle Trees
  - Replicas can contain a lot of data, so comparing them involves transfer of huge amounts of data
  - We use Merkle trees to compare replicas and figure out if the range of data residing on them are different.
