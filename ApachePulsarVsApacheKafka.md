@@ -1,0 +1,110 @@
+# Apache Pulsar vs Apache Kafka 
+- Credits to the report by Chris Bartholomew
+## What is apache Pulsar 
+- In 2015, Yahoo needed a pub-sub system 
+  - pub–sub messaging system that could deliver low-latency on commodity hardware
+  - scale to millions of topics
+  - provides strong durability
+- Running in yahoo production since 2016
+
+## Architecture
+- Kafka
+  - Zookeeper
+    - Service discovery
+    - leadership election
+    - metadata storage for the cluster
+  - Kafka broker
+    - provides full messaging capabilities of kafka
+    - responsible for a set of topics
+    - messages stored on the disk
+    - broker is stateful
+      - Only broker that has replica of its topics can take over in case of failure
+      - it contains the complete state for its topics and requires that info to operate properly
+      - replica can take over if broker fails
+    - Need for serving  and storing messages is encapsulated in the broker
+    - If you have a high serving requirement over storage, you still have to add more brokers meaning scaling both storage and serving
+    - adding disks to existing broker is possible, but it makes brokers hard to manage since some of them are of different capacity
+    - It does not have to wait for the failed bookie to be restored or another bookie to come online.
+    - If you add a new bookie, it will immediately start storing new ledgers from existing topics. 
+    - There is no need to move topics or partitions to the new server because no one bookie owns the topic or partition.
+- Pulsar
+  - Zookeeper
+    - service discovery
+    - leadership elections
+    - metadata storage
+  - pulsar broker
+    - serving messages
+    - stateless
+      - Any broker can take over for any other failed broker
+  - Bookkeeper bookie
+    - storing messages
+    - BookKeeper: a distributed log
+    - Breaks the log into segments called ledgers
+    - If a bookie fails, some topics will become under replicated
+    - Bookkeeper will automatically start copying ledgers from replicas stored on other bookier to restore the replication factor
+  - Unlike kafka, Pulsar separates message serving function from the message storage function using Pulsar broker and the bookkeeper bookie component
+  - layered architecture
+    - broker layer: serves
+    - BookKeeper layer: stores
+  - Pulsar broker has built-in load-balancer
+    - monitors cpu,memory and network usage of each broker and move responsiblity of topics between brokers in order to maintain a balanced load
+- Replication Model
+  - Kafka
+    - Leader Follower model
+      - One of the broker elected as Topic leader
+      - messages are first written onto leader
+      - followers read and replicate
+  - Pulsar
+    - Quorum-vote replication model
+      - Multiple copies of the messages are written in parallel
+      - Once some number of copies have been confirmed stored then the message is acknowledged(ack quorum)
+  - Because brokers are stateless, the storage layer is distributed and the quorum-vote replication model is used, dealing with failed servers is easier in Pulsar than in Kafka 
+    - You just replicae the failed server and Pulsar recovers automatically
+    - adding capacity to the cluster is easy since its just simple horizontal scaling
+  - Because the serving and storage layers are separated, you can scale them independently.
+    - If  serving requirement are high and storage requirements are low
+      - add more Pulsar brokers to the cluster
+    - If the storage requirements are high but the serving requirements are low
+      - add more BookKeeper bookies
+    - This independent scalability means you can better optimize your cluster resources, avoiding paying for extra storage when you just need extra serving power and vice versa.
+- Pub-sub messaging overview
+  - Like Kafka, Pulsar supports the pub–sub messaging pattern and can support high volumes of messages with consistent latency
+  - Kafka uses consumer group to enable multiple consumers
+    - Message copy delivered to the consumer group
+  - Pulsar achieves delivery of message to consumers using subscription associated with topic
+  - pulsar delivers one message to the subscription
+- Log 
+  - Log is immutable
+  - Messages are written to the and read from the log
+  - Messages are retained for certain configurable time
+  - Consumers indicate the offset to the broker to convey how much they have read
+  - Logs support the replay feature for its consumers
+- Kafka and Pulsar have many similarities. They both are pub– sub messaging systems that can handle high messaging volumes. They use a log abstraction for topics and support the replay of mes‐ sages. Where they differ is in their support of the traditional mes‐ saging model.
+
+- Support for Traditional Messaging model
+- In the traditional messaging model, the messaging system takes responsibility for ensuring a message is delivered to the consumer. 
+  - It does this by keeping track of whether or not the consumer has acknowledged a message and will periodically redeliver that message to the consumer until it has been acknowledged
+  - Once the message has been acknowledged, it is deleted (or marked for future deletion). 
+  - An unacknowledged message is never deleted. It will persist forever. An acknowledged message is never sent to a consumer.
+  - Pulsar fully supports this model using subscriptions. Because of this capability, Pulsar is able to support additional messaging patterns that focus on how the message is consumed
+  - Kafka unlike traditional messaging system do not redeliver the messages
+    - Clients/consumers will have to implement retry mechanism
+- Competing Consumer Pattern
+  - Kafka
+    - in Kafka a partition can only be consumed by one consumer at a time.
+    - To get competing consumers to work, there needs to be a partition for each consumer
+    - If consumers are greater than partitions, extra consumers will be idle
+    - So you need to know number of consumer beforehand when creating topic
+    - You can increase the number of partitions on a topic, but this is a fairly significant change, especially if you are assigning partitions based on keys
+    - Downside of competing consumers out of order processing of messages
+      - Kafka has an advantage in this area
+    - Because of its use of partitions and the rule that only one consumer can consume from a partition at a time, Kafka is able to guarantee in-order delivery of messages that have the same key with competing consumers
+    - If messages are routed to partitions by key, then the messages in each partition are in publishing order for that key. 
+    - A consumer can consume off that partition getting the messages in order.
+  - Pulsar
+    - In Pulsar, the competing consumers pattern is easy to implement. You just create a shared subscription on a topic.
+    - consumer process in Round robin fashion
+    - new consumers can be added or removed
+    - Pulsar subscription will periodically redeliver unacknowledged messages to consumers.
+    - Pulsar supports routing messages to partitions by key, so it is also possible to implement competing consumers just like in Kafka.
+    - A shared subscription is simpler, but if you need to guarantee message order by key while scaling out consumers for parallel processing you can do that in Pulsar too.
