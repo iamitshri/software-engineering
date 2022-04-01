@@ -2,11 +2,13 @@
 
 == Concepts
 
-- Protocols
+- Understand Protocols
     * TCP
     * UDP
-    * Http
-    * Rest
+    * HTTP
+    
+- Remote procedure call (RPC) styles
+    * Rest style
     * GraphQl
     * Websockets
     * gRpc
@@ -101,9 +103,7 @@
 ** Access-Control-Request-Headers
 ** Access-Control-Request-Method
 
-
  
-  
 - Caching 
     * Redis, Memcache, aws Elastic Cache
     * Eviction policies
