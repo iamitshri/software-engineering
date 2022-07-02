@@ -1,0 +1,22 @@
+- Goals of CICD pipeline 
+    - Creating Pull Request to main or development branch
+       - Creates static analysis report 
+       - Runs Integration tests
+    - Build Unit tests and build a binary
+    - Static analysis using sonarcube
+       -  Create static analysis policy per team or project
+       -  Check for certain % of code coverage
+       -  Fail build if Major coding issues are discovered e.g. password in files 
+    - Update/export Metrics like Code Coverage
+        - Code Coverage for Integration and unit tests are exported   
+    - Integrate with Jira, Slack
+        - Notify events when build fails or falls below certain percentage  
+    - Integrate with APM like NewRelic, Datadog, Prometheus, Grafana 
+        - Register deployment version 
+    - Vulnerability check e.g. Veracode
+        - Find libs that have CVEs
+    - Integration tests
+        - Postman: Newman
+    - Create docker Image and save it in image registry 
+    - Deploy image in dev, qa and prod 
+        - Use validation process 
